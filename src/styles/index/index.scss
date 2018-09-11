@@ -1,0 +1,132 @@
+.App{
+  .navTab{
+    position: fixed;
+    width:100%;
+    bottom: 0;
+    border-top:1px solid #ddd;
+    padding: 0.3rem 0;
+    background: #eee;
+    li{
+      width:25%;
+      float: left;
+      text-align: center;
+      list-style: none;
+      div{
+        width:1.8rem;
+        height:1.8rem;
+        margin-left: 2rem;
+        margin-bottom: 0.2rem;
+        background: url('../../images/indexTab.png') no-repeat;
+        background-size: cover;
+        border:none;
+      }
+      
+      &:nth-of-type(2){
+        div{
+          background: url('../../images/discountTab.png') no-repeat;
+          background-size: cover;
+        }
+      }
+      &:nth-of-type(3){
+        div{
+          background: url('../../images/hikingTab.png') no-repeat;
+          background-size: cover;
+        }
+      }
+      &:nth-of-type(4){
+        div{
+          background: url('../../images/myTab.png') no-repeat;
+          background-size: cover;
+        }
+      }
+      a{
+        color:#666;
+        text-decoration: none;
+        font-size: 0.9rem;
+      } 
+    }
+  }
+  .indexPage{
+    ul{
+      padding: 0;
+      margin: 0;
+      li{
+        width:20%;
+        float: left;
+        text-align: center;
+        list-style: none;
+        background: #fff;
+        padding:0.3rem 0 0.6rem 0;;
+        div{
+          width:1.8rem;
+          height:1.8rem;
+          margin-left: 1.5rem;
+          margin-bottom: 0.2rem;
+          background: url('../../images/nav1.png') no-repeat;
+          background-size: cover;
+          border:none;
+        }
+        &:nth-of-type(2){
+          div{
+            background: url('../../images/nav2.png') no-repeat;
+            background-size: cover;
+          }
+        }
+        &:nth-of-type(3){
+          div{
+            background: url('../../images/nav3.png') no-repeat;
+            background-size: cover;
+          }
+        }
+        &:nth-of-type(4){
+          div{
+            background: url('../../images/nav4.png') no-repeat;
+            background-size: cover;
+          }
+        }
+        &:nth-of-type(5){
+          div{
+            background: url('../../images/nav5.png') no-repeat;
+            background-size: cover;
+          }
+        }
+        &:nth-of-type(6){
+          div{
+            background: url('../../images/nav6.png') no-repeat;
+            background-size: cover;
+          }
+        }
+        &:nth-of-type(7){
+          div{
+            background: url('../../images/nav7.png') no-repeat;
+            background-size: cover;
+          }
+        }
+        &:nth-of-type(8){
+          div{
+            background: url('../../images/nav8.png') no-repeat;
+            background-size: cover;
+          }
+        }
+        &:nth-of-type(9){
+          div{
+            background: url('../../images/nav3.png') no-repeat;
+            background-size: cover;
+          }
+        }
+        &:nth-of-type(10){
+          div{
+            background: url('../../images/nav7.png') no-repeat;
+            background-size: cover;
+          }
+        }
+        a{
+          color:#666;
+          text-decoration: none;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+
