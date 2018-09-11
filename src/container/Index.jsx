@@ -30,8 +30,22 @@ const Home = () => {
                 <li><Link to="/service"><div></div>生活服务</Link></li>
                 <li><Link to="/shopping"><div></div>购物</Link></li>
             </ul>
+            {/* 每日福利 */}
+            <div className="benefits">
+
+            </div>
+            <div className="storeList">
+                <div className="rank">
+                    <span>排行榜</span>
+                    <span>袁州区湘菜热门榜第1名</span>
+                    <span>></span>
+                </div>
+                <div className="foodContent">
+
+                </div>
+            </div>
         </div>
-        
+
     )
 }
 
@@ -54,8 +68,8 @@ export default class Index extends Component {
                 <Route path="/service" component={Service} />
                 <Route path="/shopping" component={Shopping} />
                 <Route exact path='/' component={Home} />
-            </Switch> 
+            </Switch>
         )
     }
-    
+
 }

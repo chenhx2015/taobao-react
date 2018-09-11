@@ -7,7 +7,7 @@
   background: #eee; }
   .App .navTab li {
     width: 25%;
-    float: left;  
+    float: left;
     text-align: center;
     list-style: none; }
     .App .navTab li div {
@@ -26,7 +26,7 @@
       background-size: cover; }
     .App .navTab li:nth-of-type(4) div {
       background: url("../../images/myTab.png") no-repeat;
-      background-siz e: cover; }
+      background-size: cover; }
     .App .navTab li a {
       color: #666;
       text-decoration: none;
