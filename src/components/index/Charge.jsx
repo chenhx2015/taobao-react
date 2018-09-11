@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 // import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 
-export default class Service extends Component {
+export default class Charge extends Component {
    
     render() {
         return (
-            <div className="ServicePage">
-               Service
+            <div className="chargePage">
+               Charge
             </div>
         )
     }

@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom"
 
 import Index from './container/Index'
-import Discount from './container/Discount'
-import Hiking from './container/Hiking'
+import Weitao from './container/Weitao'
+import ShoppingCart from './container/ShoppingCart'
 import My from './container/My'
 
 import './styles/index/index.css'
@@ -15,28 +15,28 @@ class App extends Component {
       <div className="App">
       <Switch>
       
-          <Route path="/discount" component={Discount} />
-          <Route path="/hiking" component={Hiking} />
+          <Route path="/weitao" component={Weitao} />
+          <Route path="/shoppingCart" component={ShoppingCart} />
           <Route path="/my" component={My} />
           {/* 首页 */}
           <Route path="/" component={Index} />
       </Switch>  
         
           <Route render={({match, location}) => {
-          return ['/discount','/hiking','/my','/'].includes(location.pathname) ?
+          return ['/weitao','/shoppingCart','/my','/'].includes(location.pathname) ?
                 (  
                 <div className="navTab">
                 <li>
                   <Link to="/"><div></div>首页</Link>
                 </li>
                 <li>
-                  <Link to="/discount"><div></div>优惠</Link>
+                  <Link to="/weitao"><div></div>微淘</Link>
                 </li>
                 <li>
-                  <Link to="/hiking"><div></div>足迹</Link>
+                  <Link to="/shoppingCart"><div></div>购物车</Link>
                 </li>
                 <li>
-                  <Link to="/my"><div></div>我的</Link>
+                  <Link to="/my"><div></div>我的淘宝</Link>
                 </li>
               </div>)
               : null

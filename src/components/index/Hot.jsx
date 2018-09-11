@@ -3,11 +3,11 @@ import React, { Component } from 'react'
 
 import DeliciousFoodList from './DeliciousFoodList'
 
-export default class DeliciousFood extends Component {
+export default class Hot extends Component {
    
     render() {
         return (
-            <div className="deliciousFoodPage">
+            <div className="hotPage">
                <DeliciousFoodList></DeliciousFoodList>
             </div>
         )
