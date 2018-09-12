@@ -14,11 +14,10 @@ import Goldcoin from '../components/index/Goldcoin'
 import Auction from '../components/index/Auction'
 import Classify from '../components/index/Classify'
 
-
 const Home = () => {
     return (
         <div className="indexPage">
-            <ul>
+            <ul className="nav-icon-ul">
                 <li><Link to="/tmall"><div></div>天猫</Link></li>
                 <li><Link to="/hot"><div></div>聚划算</Link></li>
                 <li><Link to="/tmallhk"><div></div>天猫国际</Link></li>
@@ -31,17 +30,56 @@ const Home = () => {
                 <li><Link to="/auction"><div></div>拍卖</Link></li>
                 <li><Link to="/classify"><div></div>分类</Link></li>
             </ul>
-            {/* 每日福利 */}
-            <div className="benefits">
+            {/* 热门商品 */}
+            <ul className="topGoodsList">
+                <li><Link to="/"><img src={require('../images/index/img-hot-1.png')} alt=""/></Link></li>
+                <li><Link to="/"><img src={require('../images/index/img-hot-2.png')} alt=""/></Link></li>
+
+                <li><Link to="/"><img src={require('../images/index/img-hot-3.png')} alt=""/></Link></li>
+                <li><Link to="/"><img src={require('../images/index/img-hot-4.png')} alt=""/></Link></li>
+
+                <li><Link to="/"><img src={require('../images/index/img-hot-5.png')} alt=""/></Link></li>
+                <li><Link to="/"><img src={require('../images/index/img-hot-6.png')} alt=""/></Link></li>
+            </ul>
+            {/* 各个大模块 */}
+            <div className="eachModule">
+                {/* 时尚大咖 */}
+                <div className="fashionItem">
+                    <span className="fashionTip">时尚大咖</span>
+                    <li><Link to="/"><img src={require('../images/index/icon-module-1.png')} alt=""/></Link></li>
+                    <li><Link to="/"><img src={require('../images/index/icon-module-0.png')} alt=""/></Link></li>
+                    <li><Link to="/"><img src={require('../images/index/icon-module-2.png')} alt=""/></Link></li>
+                    <li><Link to="/"><img src={require('../images/index/icon-module-3.png')} alt=""/></Link></li>
+                    <li><Link to="/"><img src={require('../images/index/icon-module-3.png')} alt=""/></Link></li>
+                    <li><Link to="/"><img src={require('../images/index/icon-module-2.png')} alt=""/></Link></li>
+                </div>
+                {/* 实惠好货 */}
+                <div className="fashionItem">
+                    <span className="salegoodTip">实惠好货</span>
+                    <li><Link to="/"><img src={require('../images/index/icon-module-1.png')} alt=""/></Link></li>
+                    <li><Link to="/"><img src={require('../images/index/icon-module-0.png')} alt=""/></Link></li>
+                    <li><Link to="/"><img src={require('../images/index/icon-module-2.png')} alt=""/></Link></li>
+                    <li><Link to="/"><img src={require('../images/index/icon-module-3.png')} alt=""/></Link></li>
+                    <li><Link to="/"><img src={require('../images/index/icon-module-3.png')} alt=""/></Link></li>
+                    <li><Link to="/"><img src={require('../images/index/icon-module-2.png')} alt=""/></Link></li>
+                </div>
+                {/* 买遍全球 */}
+                <div className="fashionItem">
+                    <span className="allgoodTip">买遍全球</span>
+                    <li><Link to="/"><img src={require('../images/index/icon-module-1.png')} alt=""/></Link></li>
+                    <li><Link to="/"><img src={require('../images/index/icon-module-0.png')} alt=""/></Link></li>
+                    <li><Link to="/"><img src={require('../images/index/icon-module-2.png')} alt=""/></Link></li>
+                    <li><Link to="/"><img src={require('../images/index/icon-module-3.png')} alt=""/></Link></li>
+                    <li><Link to="/"><img src={require('../images/index/icon-module-3.png')} alt=""/></Link></li>
+                    <li><Link to="/"><img src={require('../images/index/icon-module-2.png')} alt=""/></Link></li>
+                </div>
+                {/* 潮流酷玩 */}
 
             </div>
         </div>
 
     )
 }
-
-
-
 export default class Index extends Component {
 
     render() {
@@ -52,7 +90,7 @@ export default class Index extends Component {
                 <Route path="/tmallhk" component={Tmallhk} />
                 <Route path="/takeout" component={Takeout} />
                 <Route path="/tmallmkt" component={Tmallmkt} />
-                
+
                 <Route path="/charge" component={Charge} />
                 <Route path="/flypigtravel" component={Flypigtravel} />
                 <Route path="/goldcoin" component={Goldcoin} />

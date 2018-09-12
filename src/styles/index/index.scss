@@ -1,4 +1,5 @@
 .App{
+  margin-bottom: 5rem;
   .navTab{
     position: fixed;
     width:100%;
@@ -20,7 +21,7 @@
         background-size: cover;
         border:none;
       }
-      
+
       &:nth-of-type(2){
         div{
           background: url('../../images/discountTab.png') no-repeat;
@@ -43,13 +44,15 @@
         color:#666;
         text-decoration: none;
         font-size: 0.9rem;
-      } 
+      }
     }
   }
   .indexPage{
-    ul{
+    .nav-icon-ul{
       padding: 0;
       margin: 0;
+      overflow: hidden;
+      // height: auto;
       li{
         width:20%;
         float: left;
@@ -126,6 +129,116 @@
           font-size: 0.8rem;
         }
       }
+    }
+    .topGoodsList{
+      padding: 0;
+      margin: 0;
+      margin-top: 0.3rem;
+      overflow: hidden;
+      li{
+        list-style: none;
+        float: left;
+        width:49.75%;
+        height: 6.2rem;
+        img{
+          width:100%;
+          height: 100%;
+        }
+        &:nth-of-type(2n+1){
+          border-bottom: 0.1rem solid #eee;
+          border-right: 0.1rem solid #eee;
+        }
+        &:nth-of-type(2n){
+          border-bottom: 0.1rem solid #eee;
+        }
+        &:nth-last-of-type(2){
+          border-bottom: none;
+        }
+        &:nth-last-of-type(1){
+          border-bottom: none;
+        }
+
+      }
+    }
+    .eachModule{
+        .fashionItem{
+          margin-top: 1.4rem;
+          position: relative;
+          display: grid;
+          grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
+          .fashionTip{
+            position: absolute;
+            background: rgb(245, 100, 131);
+            padding:0.4rem 1rem;
+            color:#fff;
+            border-radius: 0 20px 20px 0;
+            top:-0.8rem;
+          }
+          .salegoodTip{
+            position: absolute;
+            background: #ff6300;
+            padding:0.4rem 1rem;
+            color:#fff;
+            border-radius: 0 20px 20px 0;
+            top:-0.8rem;
+          }
+          .allgoodTip{
+            position: absolute;
+            background: #df70c7;
+            padding:0.4rem 1rem;
+            color:#fff;
+            border-radius: 0 20px 20px 0;
+            top:-0.8rem;
+          }
+          li{
+            list-style: none;
+            height: 7.2rem;
+            img{
+              width:100%;
+              height: 100%;
+            }
+            &:nth-of-type(1){
+              grid-column-start: 1;
+              grid-column-end: 5;
+              grid-row-start: 1;
+              grid-row-end: 2;
+              border-right: 0.03rem solid #eee;
+            }
+            &:nth-of-type(2){
+              grid-column-start: 5;
+              grid-column-end: 7;
+              grid-row-start: 1;
+              grid-row-end: 2;
+            }
+            &:nth-of-type(3){
+              grid-column-start: 1;
+              grid-column-end: 4;
+              grid-row-start: 2;
+              grid-row-end: 3;
+              border-bottom: 0.1rem solid #eee;
+              border-right: 0.1rem solid #eee;
+            }
+            &:nth-of-type(4){
+              grid-column-start: 4;
+              grid-column-end: 7;
+              grid-row-start: 2;
+              grid-row-end: 3;
+            }
+            &:nth-of-type(5){
+              grid-column-start: 1;
+              grid-column-end: 4;
+              grid-row-start: 3;
+              grid-row-end: 4;
+              border-right: 0.1rem solid #eee;
+            }
+            &:nth-of-type(6){
+              grid-column-start: 4;
+              grid-column-end: 7;
+              grid-row-start: 3;
+              grid-row-end: 4;
+            }
+          }
+        }
     }
   }
 }
