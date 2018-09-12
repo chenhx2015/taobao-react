@@ -11,7 +11,7 @@ export default class DeliciousFoodList extends Component {
             <div className="deliciousFoodListPage">
                 <div className="deliciousFoodul">
                     <div className="food-img">
-                        <img src={require('../../images/nav5.png')} alt=""/>
+                        <img src='/images/nav5.png' alt=""/>
                     </div>
                     <div className="food-intro">
                         <p className="store-name">温汤人家（温汤大酒店餐饮部）</p>
@@ -31,7 +31,7 @@ export default class DeliciousFoodList extends Component {
 
                 <div className="deliciousFoodul">
                     <div className="food-img">
-                        <img src={require('../../images/nav3.png')} alt=""/>
+                        <img src='/images/nav3.png' alt=""/>
                     </div>
                     <div className="food-intro">
                         <p className="store-name">温汤人家（温汤大酒店餐饮部）</p>
