@@ -14,6 +14,8 @@ import Goldcoin from '../components/index/Goldcoin'
 import Auction from '../components/index/Auction'
 import Classify from '../components/index/Classify'
 
+import RecommendgoodsList from '../components/index/recommend/RecommendgoodsList'
+
 const Home = () => {
     return (
         <div className="indexPage">
@@ -74,14 +76,18 @@ const Home = () => {
                     <li><Link to="/"><img src={require('../images/index/icon-module-2.png')} alt=""/></Link></li>
                 </div>
                 {/* 潮流酷玩 */}
-
+            </div>
+            {/* 猜你喜欢 */}
+            <div className="recommendgoods">
+                <p>猜你喜欢</p>
+                {/* 推荐产品列表组件 */}
+                <RecommendgoodsList />
             </div>
         </div>
 
     )
 }
 export default class Index extends Component {
-
     render() {
         return (
             <Switch>
@@ -100,5 +106,4 @@ export default class Index extends Component {
             </Switch>
         )
     }
-
 }
