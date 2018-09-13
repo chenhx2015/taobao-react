@@ -1,6 +1,6 @@
 const GET_LIST_DATA = 'GET_LIST_DATA'
 
-let getListDataAction = (text) => {
+let getListAction = (text) => {
     return {
         type: GET_LIST_DATA,
         text
@@ -8,4 +8,4 @@ let getListDataAction = (text) => {
 }
 
 // const getListDataAction = ('hello')
-export default getListDataAction
+export default getListAction

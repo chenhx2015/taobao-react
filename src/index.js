@@ -6,6 +6,7 @@ import './index.css'
 import App from './App'
 import registerServiceWorker from './registerServiceWorker'
 import { createStore } from 'redux'
+
 import taobaoApp from './store/reducer/getlist'
 
 let store = createStore(taobaoApp)

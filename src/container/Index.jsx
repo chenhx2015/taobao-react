@@ -2,6 +2,12 @@ import React, { Component , ReactFragment} from 'react'
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom"
 import '../styles/index/index.css'
 
+import PropTypes from 'prop-types'
+import axios from 'axios'
+import getListAction from '../store/action/actions'
+
+import { connect } from 'react-redux'
+
 import Tmall from '../components/index/Tmall'
 import Hot from '../components/index/Hot'
 import Tmallhk from '../components/index/Tmallhk'
@@ -14,7 +20,7 @@ import Goldcoin from '../components/index/Goldcoin'
 import Auction from '../components/index/Auction'
 import Classify from '../components/index/Classify'
 
-import RecommendgoodsList from '../components/index/recommend-list'
+import RecommendList from '../components/index/Recommendlist'
 import Recommend from '../components/index/recommend/route'
 
 const Home = () => {
@@ -82,13 +88,19 @@ const Home = () => {
             <div className="recommendgoods">
                 <p>猜你喜欢</p>
                 {/* 推荐产品列表组件 */}
-                <RecommendgoodsList />
+                <RecommendList />
             </div>
         </div>
 
     )
 }
-export default class Index extends Component {
+export class Index extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            listdata: []
+        }
+    }
     render() {
         return (
             <Switch>
@@ -106,8 +118,46 @@ export default class Index extends Component {
                  */}
                 <Route exact path='/' component={Home} />
                 <Route  path='/recommend' component={Recommend} />
-                
+
             </Switch>
         )
     }
+
+    static contextTypes = {
+        store: PropTypes.object
+    }
+    componentDidMount() {
+        console.log('lplp')
+        console.log(this.context.store)
+        const store = this.context.store
+        axios.get('/mockData/goods.json').then(
+            (res) => {
+                console.log(store)
+                console.log(res.data)
+                // this.setState({listdata: res.data})
+                // console.log('newlistdata--', this.state.listdata)
+
+            }
+
+        )
+    }
+
+
 }
+
+const mapStateToProps = (state) => {
+    return {
+        state
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        getData: () => dispatch(getListAction(this.state.listdata))
+    }
+}
+
+
+
+export default connect(mapStateToProps, mapDispatchToProps) (RecommendList)
+

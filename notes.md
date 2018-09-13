@@ -8,10 +8,11 @@
   3. let
   4. const
 
-# jsx语法：
-  1. JSX 防注入攻击
-  2. JSX 代表 Objects
-  3. JSX 属性
+# jsx相关：
+  1. JSX 语法
+  2. JSX 防注入攻击
+  3. JSX 代表 Objects
+  4. JSX 属性
 
 # react 一般用法：
   1. 渲染元素到DOM中: ReactDOM.render()

@@ -1,15 +1,15 @@
 let getlist = (state, action) => {
     switch (action.type) {
-        case 'getListData':
+        case 'GET_LIST_DATA':
             return {
-                ...state
+                state
             }
             break;
-    
+
         default:
-            break;
+            return state
     }
-    return state
+
 }
 
 export default getlist
