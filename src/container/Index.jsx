@@ -86,8 +86,7 @@ const Home = () => {
             </div>
             {/* 猜你喜欢 */}
             <div className="recommendgoods">
-                <p>猜你喜欢</p>
-                {/* 推荐产品列表组件 */}
+                {/* 推荐产品列表组件 猜你喜欢 */}
                 <RecommendList />
             </div>
         </div>
@@ -134,20 +133,18 @@ export class Index extends Component {
             (res) => {
                 console.log(store)
                 console.log(res.data)
-                // this.setState({listdata: res.data})
-                // console.log('newlistdata--', this.state.listdata)
-
+                this.setState({listdata: res.data})
+                console.log('newlistdata--', this.state.listdata)
+                // store.dispatch(getListAction(this.state.listdata))
             }
-
         )
     }
-
-
 }
 
 const mapStateToProps = (state) => {
+   console.log('--state--', state)
     return {
-        state
+        listdata: state
     }
 }
 
@@ -156,8 +153,6 @@ const mapDispatchToProps = (dispatch) => {
         getData: () => dispatch(getListAction(this.state.listdata))
     }
 }
-
-
 
 export default connect(mapStateToProps, mapDispatchToProps) (RecommendList)
 

@@ -32,11 +32,15 @@ export default class List extends Component {
         // }
     }
     render() {
-        const { state, getData } = this.props
+        const { listdata, getData } = this.props
+        console.log('--list--', listdata)
         return (
-            <ul className="recommendgoodul">
-               <Item listArray={state}/>
-            </ul>
+            <div>
+                <p onClick={ getData }>猜你喜欢</p>
+                <ul className="recommendgoodul">
+                <Item listArray={listdata}/>
+                </ul>
+            </div>
         )
     }
 }

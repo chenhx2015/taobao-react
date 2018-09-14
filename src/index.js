@@ -13,7 +13,7 @@ let store = createStore(taobaoApp)
 
 ReactDOM.render(
     <Provider store={store}>
-    <App />
+        <App />
     </Provider>,
     document.getElementById('root')
 )
