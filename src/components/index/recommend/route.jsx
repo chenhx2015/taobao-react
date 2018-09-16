@@ -10,16 +10,16 @@ const mapStateToProps = (state) => ({
 
 })
 const mapDispatchToProps = (dispatch) => ({
-    'addcart': (id, qty, intro, price, imgurl) => dispatch(addcart({id, qty, intro, price, imgurl}))
+    addcart: (id, qty, intro, price, imgurl) => dispatch(addcart({id, qty, intro, price, imgurl}))
 })
 
-const RouteAbleDetail = ({match, list, cart, ...rest}) => {
+const RouteAbleDetail = ({match, list, ...rest}) => {
     // console.log(rest)
     let id= match.params.id
     let goods = list.find(value => id == value.id )
-    console.log("...rest--", ...rest)
+
         return (
-            <Detail id={id} {...rest} {...goods} cart={cart}/>
+            <Detail id={id} {...rest} {...goods} />
         )
     }
 const DetailContainer = connect(mapStateToProps, mapDispatchToProps)(RouteAbleDetail)
@@ -29,7 +29,7 @@ export default ({location, match}) => {
         <Switch>
             <Route exact path={match.path + '/'} component={List}/>
 
-            <Route exact path={match.path + '/:id'} component={ DetailContainer}/>
+            <Route path={match.path + '/:id'} component={ DetailContainer}/>
         </Switch>
     )
 }

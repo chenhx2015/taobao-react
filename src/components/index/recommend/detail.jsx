@@ -39,7 +39,6 @@ export default class Detail extends Component {
                 </div>
                 <div className="btn-contain">
                     <div className="buybtn">
-                        {/* <span onClick={ e => {this.props.chooseToCart(this.props.id)}}>加入购物车</span> */}
                         <span onClick={this.choosepop}>加入购物车</span>
                         <span>立即购买</span>
                     </div>
@@ -58,9 +57,5 @@ export default class Detail extends Component {
     }
     
 }
-
-// export default ({imgurl, price, buyed, fee, intro, addr, id, leave, colors=[], sizes=[], chooseToCart}) =>  (
-    
-// )
 
 

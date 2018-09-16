@@ -1,7 +1,29 @@
 2018.09.11
 本次主题：基本用法 + react-router + react 和 vue 的对比
-下次主题：react高级用法 + redux + react-redux
-下次主题：react 一些中间件的使用
+
+一: react 和 vue 的对比:
+1. 作者
+2. 生命周期（一些常用的及注意事项）
+   https://www.jianshu.com/p/3fbbb0bce78a
+3. 模板和JSX
+4. 状态管理机制
+   redux, react-redux 和 vuex
+5. 组件传值
+
+二: 深入理解react组件状态state
+    https://www.jianshu.com/p/c6257cbef1b1
+
+
+<!-- 相同点: 
+1. 虚拟DOM
+2. 父子组件传值，数据流
+
+不同点：
+1. 函数
+2. 状态提升 -> redux -->
+
+<!-- 下次主题：react高级用法 + redux + react-redux
+下次主题：react 一些中间件的使用 -->
 # es6语法：
   1. 箭头函数
   2. 类
