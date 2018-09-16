@@ -1,0 +1,27 @@
+.recommendgoodul {
+  margin: 0;
+  padding: 0; }
+  .recommendgoodul .recommendgoodli {
+    float: left;
+    width: 49%;
+    margin-bottom: 1rem;
+    list-style: none;
+    background: #fff; }
+    .recommendgoodul .recommendgoodli:nth-of-type(2n-1) {
+      margin-right: 2%; }
+    .recommendgoodul .recommendgoodli a {
+      text-decoration: none;
+      color: #000; }
+      .recommendgoodul .recommendgoodli a .picdiv {
+        width: 100%;
+        height: 12rem; }
+        .recommendgoodul .recommendgoodli a .picdiv img {
+          width: 100%;
+          height: 100%; }
+      .recommendgoodul .recommendgoodli a p {
+        width: 80%;
+        margin: 1rem auto; }
+        .recommendgoodul .recommendgoodli a p .price {
+          color: #ff6300;
+          font-size: 1.2rem;
+          margin-right: 1rem; }

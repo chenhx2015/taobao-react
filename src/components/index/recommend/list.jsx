@@ -45,22 +45,7 @@ export default class List extends Component {
                 }
             ]
         }
-        // this.getData = this.getData.bind(this)  // 也可以使用箭头函数
     }
-    // getData() {
-    //     axios.get('/mockData/recommendgoods.json').then((res) => {
-    //         console.log(res.goods)
-    //         // setState 是异步执行的函数
-    //         this.setState(() => {
-    //             return {
-    //                 listArray: res.goods
-    //             }
-    //         })
-    //         console.log('popo--', this.state.listArray)
-    //     }).catch((err) => {
-    //         console.log(err.status)
-    //     })
-    // }
     render() {
         return (
             <ul className="recommendgoodul">

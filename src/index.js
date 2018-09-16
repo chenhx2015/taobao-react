@@ -5,11 +5,16 @@ import 'normalize.css'
 import './index.css'
 import App from './App'
 import registerServiceWorker from './registerServiceWorker'
-import { createStore } from 'redux'
+import { applyMiddleware, createStore } from 'redux'
 
-import taobaoApp from './store/reducer/getlist'
+import logger from 'redux-logger'
 
-let store = createStore(taobaoApp)
+import taobaoApp from './store/reducer'
+
+let store = createStore(
+    taobaoApp, 
+    applyMiddleware(logger)
+)
 
 ReactDOM.render(
     <Provider store={store}>

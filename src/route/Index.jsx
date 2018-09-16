@@ -4,7 +4,7 @@ import '../styles/index/index.css'
 
 import PropTypes from 'prop-types'
 import axios from 'axios'
-import getListAction from '../store/action/actions'
+import {addgoods} from '../store/action/actions'
 
 import { connect } from 'react-redux'
 
@@ -87,7 +87,7 @@ const Home = () => {
             {/* 猜你喜欢 */}
             <div className="recommendgoods">
                 {/* 推荐产品列表组件 猜你喜欢 */}
-                <RecommendList />
+                <RecommendListContainer />
             </div>
         </div>
 
@@ -96,9 +96,6 @@ const Home = () => {
 export class Index extends Component {
     constructor(props) {
         super(props)
-        this.state = {
-            listdata: []
-        }
     }
     render() {
         return (
@@ -121,38 +118,21 @@ export class Index extends Component {
             </Switch>
         )
     }
+    componentDidMount() {
+        axios.get('/mockData/goods.json').then(
+            (res) => {
+                this.context.store.dispatch(addgoods(res.data))
+            }
+        )
+    }
 
     static contextTypes = {
         store: PropTypes.object
     }
-    componentDidMount() {
-        console.log('lplp')
-        console.log(this.context.store)
-        const store = this.context.store
-        axios.get('/mockData/goods.json').then(
-            (res) => {
-                console.log(store)
-                console.log(res.data)
-                this.setState({listdata: res.data})
-                console.log('newlistdata--', this.state.listdata)
-                // store.dispatch(getListAction(this.state.listdata))
-            }
-        )
-    }
 }
 
-const mapStateToProps = (state) => {
-   console.log('--state--', state)
-    return {
-        listdata: state
-    }
-}
+const mapStateToProps = (state) => ({listdata: state.goods})
+const RecommendListContainer = connect(mapStateToProps)(RecommendList)
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        getData: () => dispatch(getListAction(this.state.listdata))
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps) (RecommendList)
+export default Index
 

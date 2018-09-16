@@ -3,10 +3,10 @@ import React, { Component } from 'react'
 // import axios from 'axios'
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom"
 
-import Index from './container/Index'
-import Weitao from './container/Weitao'
-import ShoppingCart from './container/ShoppingCart'
-import My from './container/My'
+import Index from './route/Index'
+import Weitao from './route/Weitao'
+import ShoppingCart from './route/ShoppingCart'
+import My from './route/My'
 
 // import getListDataAction from './store/action/actions'
 
@@ -53,20 +53,6 @@ class App extends Component {
       </Router>
     )
   }
-  // static contextTypes = {
-  //   store: PropTypes.object
-  // }
-  // componentDidMount() {
-  //   console.log('lplp')
-  //   console.log(this.context)
-  //   const { store } = this.context
-  //   axios.get('/mockData/goods.json').then(
-  //     (res) => {
-  //       store.dispatch(getListDataAction(res))
-  //     }
-
-  //   )
-  // }
 }
 
 export default App

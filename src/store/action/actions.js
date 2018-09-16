@@ -1,11 +1,18 @@
-const GET_LIST_DATA = 'GET_LIST_DATA'
+export const ADD_GOODS = 'ADD_GOODS'
+export const ADD_CART = 'ADD_CART'
 
-let getListAction = (text) => {
+export const addgoods = (data) => {
     return {
-        type: GET_LIST_DATA,
-        text
+        type: ADD_GOODS,
+        payload: data
+
     }
 }
 
-// const getListDataAction = ('hello')
-export default getListAction
+export const addcart = (goodsinfo) => {
+    return {
+        type: ADD_CART,
+        payload: goodsinfo
+    }
+}
+
