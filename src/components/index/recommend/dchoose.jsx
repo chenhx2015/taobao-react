@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import '../../../styles/index/dchoose.css'
 import {addcart} from '../../../store/action/actions'
 export default class Dchoose extends Component {
+    // 添加一个类构造函数来初始化状态 this.state
     constructor(props) {
         super(props)
         this.state = {
@@ -53,12 +54,12 @@ export default class Dchoose extends Component {
                 </div>
             </div>
         )
-    } 
+    }
     decrease() {
         this.setState({
             choosenum: this.state.choosenum - 1
         })
-    } 
+    }
     increase() {
         this.setState({
             choosenum: this.state.choosenum + 1
