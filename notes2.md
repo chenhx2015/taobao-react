@@ -1,6 +1,5 @@
 2018.09.11
 本次主题：基本用法 + react 和 vue 的对比
-下次主题：react高级用法 + redux + react-redux + react 一些中间件的使用
 
 一: react 和 vue 的对比:
 相同点:
@@ -11,6 +10,7 @@
 不同点:
 1. 作者 (facebook vs 个人！)
 2. 生命周期（一些常用的及注意事项）
+   https://www.jianshu.com/p/3fbbb0bce78a
 3. 模板和JSX
 4. 状态管理机制
    redux, react-redux 和 vuex
@@ -18,20 +18,35 @@
 6. 数据绑定：Vue双向数据绑定的方式；React，则采取单向数据流的方式
 
 二: react组件状态state
+    https://www.jianshu.com/p/c6257cbef1b1
 
 三: 如何选择使用场景
     1）期待模板搭建 -- vue  个人认为模板更容易理解
-    2）期待简单的东西 -- vue
+    2）期待简单和“能用就行”的东西 -- vue
     3）期待应用尽可能的小和快 -- vue
     4）期待构建一个大型应用程序 -- react
     5）期待同时适用于Web端和原生APP的框架 -- react
     6）期待最大的生态系统 -- react
 
-四: 参考资料
-    https://react.docschina.org/docs/introducing-jsx.html
-    https://reacttraining.com/react-router/web/api/HashRouter
-    http://www.redux.org.cn/docs/basics/ExampleTodoList.html
+四: 推荐文章
+    https://blog.csdn.net/chaunceyw/article/details/77895964
+    http://www.jianshu.com/p/8b94f1b98578
+    https://cn.vuejs.org/v2/guide/comparison.html
 
+五: 参考资料
+    https://react.docschina.org/docs/introducing-jsx.html
+
+
+<!-- 相同点:
+1. 虚拟DOM
+2. 父子组件传值，数据流
+
+不同点：
+1. 函数
+2. 状态提升 -> redux -->
+
+<!-- 下次主题：react高级用法 + redux + react-redux
+下次主题：react 一些中间件的使用 -->
 # es6语法：
   1. 箭头函数
   2. 类
@@ -43,6 +58,13 @@
   2. JSX 防注入攻击
   3. JSX 代表 Objects
   4. JSX 属性
+
+<!--
+  为什么要使用 JSX ? 优点： ---------------
+  1. JSX 执行更快，因为它在编译为 JavaScript 代码后进行了优化
+  2. 它是类型安全的，在编译过程中就能发现错误
+  3. 使用 JSX 编写模板更加简单快速
+  -->
 
 # react 一般用法：
   https://react.docschina.org/
