@@ -96,3 +96,9 @@
   9. 组合 vs 继承
      9.1 props.children
 
+
+2018.9.21
+一: 异步action
+  1. 如何把之前定义的同步 action 创建函数和网络请求结合起来呢？ --- 标准做法是使用 Redux Thunk 中间件
+
+

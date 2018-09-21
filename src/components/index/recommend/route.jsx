@@ -1,4 +1,4 @@
-import {Switch, Route} from 'react-router-dom' 
+import {Switch, Route} from 'react-router-dom'
 import React,{Component} from 'react'
 import List from './list'
 import Detail from './detail'
@@ -33,4 +33,4 @@ export default ({location, match}) => {
         </Switch>
     )
 }
- 
+
