@@ -50,6 +50,9 @@ let persistor = persistStore(store)
 //     document.getElementById('root')
 // )
 
+/**
+ * 使用 redux-persist 中间件的情况
+ */
 ReactDOM.render(
     <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
