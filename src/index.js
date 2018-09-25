@@ -29,7 +29,10 @@ const persistedReducer = persistReducer(
 //     return { store, persistor }
 // }
 
-let store = createStore(persistedReducer, applyMiddleware(logger))
+let store = createStore(
+    persistedReducer,
+    applyMiddleware(logger)
+)
 let persistor = persistStore(store)
 
 // let store = createStore(
@@ -37,6 +40,9 @@ let persistor = persistStore(store)
 //     applyMiddleware(logger)
 // )
 
+/**
+ * 没有使用 redux-persist 中间件的情况
+ */
 // ReactDOM.render(
 //     <Provider store={store}>
 //         <App />

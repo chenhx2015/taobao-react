@@ -102,3 +102,48 @@
   1. 如何把之前定义的同步 action 创建函数和网络请求结合起来呢？ --- 标准做法是使用 Redux Thunk 中间件
 
 
+
+2018.9.25
+高级部分:
+ 1. 深入JSX
+    1.1 本质上来讲，JSX只是为 React.createElement(component, props, ...children) 方法提供的语法糖
+    1.2 React 必须声明 （如果你使用 <script> 加载 React，它将作用于全局）
+    1.3 点表示法来引用组件
+    1.4 首字母大写
+    1.5 在运行时选择类型
+    1.6 属性
+        1. 使用 JavaScript 表达式
+        2. 字符串常量
+        3. 默认为 true （不建议这样做）
+        4. 扩展属性
+    1.7 子代
+        作为特殊的参数传递 props.children
+        传递子代的方法有以下几种
+        1. JSX, 注意：react组件可以通过数组的形式返回多个元素
+        2. JavaScript 表达式
+        3. 函数
+        4. 布尔值、Null 和 Undefined 被忽略
+           这在根据条件来确定是否渲染React元素时非常有用, 但是要确保 && 前面的表达式始终为布尔值，因为0会被打印出来
+           如果你想让类似 false、true、null 或 undefined 出现在输出中，你必须先把它转换成字符串
+            <div>
+              My JavaScript variable is {String(myVariable)}.
+            </div>
+ 2. 使用propTypes检查类型(使用prop-types库)
+    * 出于性能原因，propTypes 只在开发模式下进行检查
+      和在组件里面定义有什么区别 ？？？
+    2.1 propTypes
+        1. 不仅仅是类型，也可以是某个特定值之一 eg: PropTypes.oneOf(['News', 'Photos'])
+        2. 也可以是对象之一，数组之一等等
+    2.2 限制单个子代
+        1. 使用 PropTypes.element 你可以指定只传递一个子代
+    2.3 属性默认值
+        1. 通过配置 defaultProps 为 props定义默认值
+ 3. 静态类型检查
+    * flow && typescript
+    从编译过的代码中剥离 Flow 语法 ？？？
+    不是很能理解这一部分  --- **** ???
+
+
+
+
+
