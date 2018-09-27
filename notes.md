@@ -100,6 +100,13 @@
 2018.9.21
 一: 异步action
   1. 如何把之前定义的同步 action 创建函数和网络请求结合起来呢？ --- 标准做法是使用 Redux Thunk 中间件
+  2. 但是Redux Thunk不是唯一的方式
+     * redux-promise / redux-promise-middleware 来 dispatch Promise
+     * redux-observable 来 dispatch Observable
+     * redux-saga 中间件来创建更加复杂的异步 action
+     * redux-pack 中间件 dispatch 基于 Promise 的异步 Action
+二: middleware
+  1. 可以使用redux middleware 来进行日志记录，创建崩溃报告，调用异步接口或者路由等等
 
 
 
@@ -142,7 +149,61 @@
     * flow && typescript
     从编译过的代码中剥离 Flow 语法 ？？？
     不是很能理解这一部分  --- **** ???
+
+2018.9.26
  4. Refs & DOM
+    4.1 何时使用 （不要过度使用）:
+        * 处理焦点、文本选择或媒体控制
+        * 触发强制动画
+        * 集成第三方 DOM 库
+    4.2 通过 current 属性对节点进行访问
+        注意在什么时候传入current属性,什么时候改回null: 组件加载时就会传入
+    4.3 注意不能在函数式组件上使用refs,因为它们没有实例 (但是在内部可以使用)
+    4.4 可以为DOM元素和类组件添加 Ref
+    4.5 对父组件暴露DOM节点
+    4.6 另外一种设置ref的方式：回调ref,更加细致的控制何时ref被设置和解除
+ 5. 非受控组件
+    5.1 通过 defaultValue, defaultChecked 设置初始值, 而不是value
+    5.2 文件输入标签, 通过 file API 进行操作
+ 6. 性能优化
+   （可以多看几遍，做到灵活使用）
+    6.1 使用生产版本 ？？？
+    6.2 使用 Chrome Performance 归档组件
+    6.3 避免重复渲染
+    6.4 shouldComponentUpdate应用, 可以单独设置是返回 true 还是 false
+    6.5 不会突变的数据的力量
+    6.6 使用不可突变的数据结构
+        * immutable.js
+        * seamless-immutable
+        * immutability-helper
+
+2018.9.27
+ 7. 协调 Reconciliation
+    （react diff算法的选择让组件更新可预测，并使得高性能应用足够快）
+    7.1 目的
+      1. React需要算出如何高效更新UI以匹配最新的树
+    7.2 diff算法
+      1. 不同类型的元素
+      2. 相同类型的DOM元素
+      3. 相同类型的组件元素
+      4. 递归子节点 （解决方法key）
+      5. 权衡
+ 8. context
+    为了避免通过中间元素传递 props
+    8.1 何时使用context
+    8.2 render props
+ 9. Fragments
+ 10. Portals
+ 11. render props
+    render prop 是一个组件用来了解要渲染什么内容的函数 prop
+    11.1 在交叉关注点使用 render props （可借鉴）
+    11.2 使用props而非render
+    11.3 并不是真正的添加到JSX元素的attributes列表中，相反，可以直接放置到元素的内部
+    11.4 注意：要直接申明类型 propTpyes
+    11.5 在 React.PureComponent 中使用 render props 要注意
+
+
+
 
 
 
