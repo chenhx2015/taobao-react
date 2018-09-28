@@ -61,4 +61,11 @@ ReactDOM.render(
     </Provider>,
     document.getElementById('root')
 )
+
+/**
+ * 模块热替换
+ */
+// if(module.hot) {
+//     module.hot.accept()
+// }
 registerServiceWorker()
