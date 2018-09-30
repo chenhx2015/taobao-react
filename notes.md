@@ -100,5 +100,158 @@
 2018.9.21
 一: 异步action
   1. 如何把之前定义的同步 action 创建函数和网络请求结合起来呢？ --- 标准做法是使用 Redux Thunk 中间件
+  2. 但是Redux Thunk不是唯一的方式
+     * redux-promise / redux-promise-middleware 来 dispatch Promise
+     * redux-observable 来 dispatch Observable
+     * redux-saga 中间件来创建更加复杂的异步 action
+     * redux-pack 中间件 dispatch 基于 Promise 的异步 Action
+二: middleware
+  1. 可以使用redux middleware 来进行日志记录，创建崩溃报告，调用异步接口或者路由等等
+
+
+
+2018.9.25
+高级部分:
+ 1. 深入JSX
+    1.1 本质上来讲，JSX只是为 React.createElement(component, props, ...children) 方法提供的语法糖
+    1.2 React 必须声明 （如果你使用 <script> 加载 React，它将作用于全局）
+    1.3 点表示法来引用组件
+    1.4 首字母大写
+    1.5 在运行时选择类型
+    1.6 属性
+        1. 使用 JavaScript 表达式
+        2. 字符串常量
+        3. 默认为 true （不建议这样做）
+        4. 扩展属性
+    1.7 子代
+        作为特殊的参数传递 props.children
+        传递子代的方法有以下几种
+        1. JSX, 注意：react组件可以通过数组的形式返回多个元素
+        2. JavaScript 表达式
+        3. 函数
+        4. 布尔值、Null 和 Undefined 被忽略
+           这在根据条件来确定是否渲染React元素时非常有用, 但是要确保 && 前面的表达式始终为布尔值，因为0会被打印出来
+           如果你想让类似 false、true、null 或 undefined 出现在输出中，你必须先把它转换成字符串
+            <div>
+              My JavaScript variable is {String(myVariable)}.
+            </div>
+ 2. 使用propTypes检查类型(使用prop-types库)
+    * 出于性能原因，propTypes 只在开发模式下进行检查
+      和在组件里面定义有什么区别 ？？？
+    2.1 propTypes
+        1. 不仅仅是类型，也可以是某个特定值之一 eg: PropTypes.oneOf(['News', 'Photos'])
+        2. 也可以是对象之一，数组之一等等
+    2.2 限制单个子代
+        1. 使用 PropTypes.element 你可以指定只传递一个子代
+    2.3 属性默认值
+        1. 通过配置 defaultProps 为 props定义默认值
+ 3. 静态类型检查
+    * flow && typescript
+    从编译过的代码中剥离 Flow 语法 ？？？
+    不是很能理解这一部分  --- **** ???
+
+2018.9.26
+ 4. Refs & DOM
+    4.1 何时使用 （不要过度使用，并且建议使用回调）:
+        * 处理焦点、文本选择或媒体控制
+        * 触发强制动画
+        * 集成第三方 DOM 库
+    4.2 通过 current 属性对节点进行访问
+        注意在什么时候传入current属性,什么时候改回null: 组件加载时就会传入
+    4.3 注意不能在函数式组件上使用refs,因为它们没有实例 (但是在内部可以使用)
+    4.4 可以为DOM元素和类组件添加 Ref
+    4.5 对父组件暴露DOM节点
+    4.6 另外一种设置ref的方式：回调ref,更加细致的控制何时ref被设置和解除
+ 5. 非受控组件
+    5.1 通过 defaultValue, defaultChecked 设置初始值, 而不是value
+    5.2 文件输入标签, 通过 file API 进行操作
+ 6. 性能优化
+   （可以多看几遍，做到灵活使用）
+    6.1 使用生产版本 ？？？
+    6.2 使用 Chrome Performance 归档组件
+    6.3 避免重复渲染
+    6.4 shouldComponentUpdate应用, 可以单独设置是返回 true 还是 false
+    6.5 不会突变的数据的力量
+    6.6 使用不可突变的数据结构
+        * immutable.js
+        * seamless-immutable
+        * immutability-helper
+
+2018.9.27
+ 7. 协调 Reconciliation
+    （react diff算法的选择让组件更新可预测，并使得高性能应用足够快）
+    7.1 目的
+      1. React需要算出如何高效更新UI以匹配最新的树
+    7.2 diff算法
+      1. 不同类型的元素
+      2. 相同类型的DOM元素
+      3. 相同类型的组件元素
+      4. 递归子节点 （解决方法key）
+      5. 权衡
+ 8. context
+    为了避免通过中间元素传递 props
+    8.1 何时使用context
+    8.2 render props
+ 9. Fragments
+    9.1 看起来像空的 JSX 标签
+    9.2 可以像使用其它元素那样使用 <></>， 注意：<></> 是 <React.Fragment/> 的语法糖
+    9.3 另外一种使用片段的方式是使用 React.Fragment 组件
+    9.4 key 是唯一可以传递给 Fragment 的属性
+ 10. Portals
+    ReactDOM.createPortal(child, container)
+ 11. render props
+    render prop 是一个组件用来了解要渲染什么内容的函数 prop
+    11.1 在交叉关注点使用 render props （可借鉴）
+    11.2 使用props而非render
+    11.3 并不是真正的添加到JSX元素的attributes列表中，相反，可以直接放置到元素的内部
+    11.4 注意：要直接申明类型 propTpyes
+    11.5 在 React.PureComponent 中使用 render props 要注意
+ 12. Error Boundaries 错误边界
+    12.1 错误边界无法捕获的一些错误
+ 13. Web Components
+
+
+2018.9.28
+ 14. 高阶组件 higher-order-components
+    14.1 高阶组件是一种模式，本身并不是React API
+    14.2 具体而言，高阶组件就是一个函数，且该函数接受一个组件作为参数，并返回一个新的组件
+    14.3 为什么高阶组件很有作用
+    14.4 如何实现一个高阶组件
+ 15. 传递Refs(Forwarding Refs)
+ 16. 可访问性 ------ 了解一下就可以了
+    16.1 为何需要可访问性
+    16.2 一些标准和指导
+    16.3 可访问表单
+        1. 标签
+           * 注意在JSX中，for特性被写作htmlFor
+        2. 告知用户异常
+    16.4 焦点控件
+        1. 键盘焦点和焦点边框
+        2. 定位到期望内容的机制
+        3. 编程式的管理焦点
+ 17. Code-Splitting
+    17.1 和webpack相关
+    17.2 import进来直接使用
+    17.3 React Loadable 库 在特定组件下引入代码分割的功能
+    17.4 React Loadable 帮助你创建加载状态、错误状态、超时、预加载等等。它甚至能通过大量的代码分割帮助进行服务端渲染
+    17.5 基于路由的代码分割
+ 18. 严格模式
+    18.1 可以在应用的任何地方启用严格模式StrictMode： <React.StrictMode></React.StrictMode>
+    18.2 不会渲染任何真实的UI (和Fragment一样)
+    18.3 它为其后代元素触发额外的检查和警告
+    18.4 注意: 严格模式检查只在开发模式下运行，不会与生产模式冲突
+    18.5 严格模式有助于：
+         * 识别具有不安全生命周期的组件
+         * 有关旧式字符串ref用法的警告 （建议改用回调）
+         * 检测意外的副作用
+ 19. 与第三方库协同 ------了解一下就可以了
+
+
+
+
+
+
+
+
 
 

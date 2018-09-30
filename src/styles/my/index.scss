@@ -1,0 +1,100 @@
+.myindex{
+    width:100%;
+    .infocard{
+        width:100%;
+        background: #ff6300;
+        padding:1rem 0;
+        color:#fff;
+        .infocardbox{
+            width:92%;
+            margin:0 auto;
+            position: relative;
+            .img{
+                width:2.6rem;
+                position: absolute;
+                top:0;
+                left:0;
+                img{
+                    width:100%;
+                    height: auto;
+                }
+            }
+            .info{
+                margin-left: 3.4rem;
+                .num{
+                    margin-bottom: 4px;
+                }
+                .account{
+                    font-weight: lighter;
+                    font-size: 12px;
+                    background: rgba(0,0,0,.2);
+                    padding:0 10px;
+                    border-radius: 12px;
+                }
+            }
+            .setting{
+                position: absolute;
+                right:0;
+                top:0;
+                font-weight: lighter;
+                font-size: 14px;
+            }
+            .tab{
+                ul{
+                    padding:0;
+                    margin:0.6rem 0 0;
+                    overflow: hidden;
+                    li{
+                        list-style: none;
+                        float: left;
+                        width:25%;
+                        text-align: center;
+                        a{
+                            font-size: 12px;
+                            text-decoration: none;
+                            color:#fff;
+                            font-weight: lighter;
+                            p{
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 会员
+    .member{
+        position: relative;
+        top:-0.8rem;
+        overflow: hidden;
+        width: 88%;
+        margin:0 auto;
+        background: #fff;
+        color:#888;
+        font-size: 12px;
+        padding:3%;
+        border-radius: 10px;
+        .membervalue{
+            float: left;
+            width:28%;
+            div:nth-of-type(1){
+                margin-bottom: 6px;
+            }
+        }
+        .membertip{
+            float: left;
+            width:44%;
+            div:nth-of-type(1){
+                margin-bottom: 6px;
+            }
+        }
+        .membercard{
+            float: right;
+            padding:0.4rem 0.1rem;
+            background: #000;
+            color:#fff;
+            border-radius: 6px;
+        }
+    }
+}
