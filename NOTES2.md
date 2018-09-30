@@ -22,4 +22,5 @@
 13. https://www.jianshu.com/p/e5edfedc57a9?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation
 
 不理解的问题：
-1. 单页用用和多页应用有什么区别？怎么选择？
+1. 单页应用和多页应用有什么区别？怎么选择？
+2. react源码解析可以看一下

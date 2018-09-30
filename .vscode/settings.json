@@ -1,0 +1,11 @@
+{
+    // 配置 glob 模式以排除文件和文件夹。
+    "files.exclude": {
+        "**/cache": true,
+        "**/node_modules": false,
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true
+    },
+}

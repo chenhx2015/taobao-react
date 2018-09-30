@@ -1,0 +1,76 @@
+.myindex {
+  width: 100%; }
+  .myindex .infocard {
+    width: 100%;
+    background: #ff6300;
+    padding: 1rem 0;
+    color: #fff; }
+    .myindex .infocard .infocardbox {
+      width: 92%;
+      margin: 0 auto;
+      position: relative; }
+      .myindex .infocard .infocardbox .img {
+        width: 2.6rem;
+        position: absolute;
+        top: 0;
+        left: 0; }
+        .myindex .infocard .infocardbox .img img {
+          width: 100%;
+          height: auto; }
+      .myindex .infocard .infocardbox .info {
+        margin-left: 3.4rem; }
+        .myindex .infocard .infocardbox .info .num {
+          margin-bottom: 4px; }
+        .myindex .infocard .infocardbox .info .account {
+          font-weight: lighter;
+          font-size: 12px;
+          background: rgba(0, 0, 0, 0.2);
+          padding: 0 10px;
+          border-radius: 12px; }
+      .myindex .infocard .infocardbox .setting {
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-weight: lighter;
+        font-size: 14px; }
+      .myindex .infocard .infocardbox .tab ul {
+        padding: 0;
+        margin: 0.6rem 0 0;
+        overflow: hidden; }
+        .myindex .infocard .infocardbox .tab ul li {
+          list-style: none;
+          float: left;
+          width: 25%;
+          text-align: center; }
+          .myindex .infocard .infocardbox .tab ul li a {
+            font-size: 12px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: lighter; }
+  .myindex .member {
+    position: relative;
+    top: -0.8rem;
+    overflow: hidden;
+    width: 88%;
+    margin: 0 auto;
+    background: #fff;
+    color: #888;
+    font-size: 12px;
+    padding: 3%;
+    border-radius: 10px; }
+    .myindex .member .membervalue {
+      float: left;
+      width: 28%; }
+      .myindex .member .membervalue div:nth-of-type(1) {
+        margin-bottom: 6px; }
+    .myindex .member .membertip {
+      float: left;
+      width: 44%; }
+      .myindex .member .membertip div:nth-of-type(1) {
+        margin-bottom: 6px; }
+    .myindex .member .membercard {
+      float: right;
+      padding: 0.4rem 0.1rem;
+      background: #000;
+      color: #fff;
+      border-radius: 6px; }
