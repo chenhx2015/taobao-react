@@ -44,6 +44,13 @@ const Member = () => {
         </div>
     )
 }
+const Myordercard = () => {
+    return (
+        <div className="Myordercard">
+
+        </div>
+    )
+}
 
 export default class Myindex extends Component {
     constructor(props) {
@@ -54,6 +61,7 @@ export default class Myindex extends Component {
             <div className="myindex">
                 <Infocard />
                 <Member />
+                <Myordercard />
             </div>
         )
     }
