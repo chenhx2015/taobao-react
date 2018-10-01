@@ -8,6 +8,7 @@ import registerServiceWorker from './registerServiceWorker'
 import { applyMiddleware, createStore } from 'redux'
 
 import logger from 'redux-logger'
+import thunk from 'redux-thunk'
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import { PersistGate } from 'redux-persist/integration/react'
@@ -31,7 +32,7 @@ const persistedReducer = persistReducer(
 
 let store = createStore(
     persistedReducer,
-    applyMiddleware(logger)
+    applyMiddleware(thunk, logger)
 )
 let persistor = persistStore(store)
 

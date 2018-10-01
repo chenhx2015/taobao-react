@@ -18,7 +18,7 @@ let ListItem = ( {price, num, intro, imgurl,id} ) => (
 )
 
 
-export default ({listdata=[]}) => {
+const Recommendgoodul = ({listdata=[]}) => {
     return (
         <div>
             <p >猜你喜欢</p>
@@ -29,4 +29,18 @@ export default ({listdata=[]}) => {
             </ul>
         </div>
     )
+}
+
+export default class RecommendList extends Component {
+    constructor(props) {
+        super(props)
+    }
+    componentDidMount() {
+        this.props.fetchList()
+    }
+    render() {
+        return (
+            <Recommendgoodul {...this.props}/>
+        )
+    }
 }

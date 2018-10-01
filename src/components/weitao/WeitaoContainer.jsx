@@ -1,29 +1,39 @@
-import React, {Component} from 'react'
+
+import {connect} from 'react-redux'
 import WeitaoList from './WeitaoList'
 import fetch from 'cross-fetch'
+import {addweitaodata} from '../../store/action/actions'
 
-export default class WeitaoContainer extends Component{
-    constructor(props) {
-        super(props)
-        this.state = {
-            listData: []
-        }
-    }
-    render() {
-        return (
-            <WeitaoList list={this.state.listData} />
-        )
-    }
-    componentDidMount() {
-        fetch('/mockData/weitao.json',{}).then(res => {
-            return  res.json()
-        }).then(res =>{
-            this.setState({
-                listData: res.listData
-            })
-            return res
-        }).catch(error => {
-    
-        })
-    }
+const fetchData = (dispatch, getState) => {
+    return fetch('/mockData/weitao.json',{}).then(res => {
+        return res.json()
+    }).then(res => {
+        dispatch(addweitaodata(res.listData))
+    })
 }
+const mapStateToProps = (state) => ({
+    list: state.weitao
+})
+const mapDispatchToProps = (dispatch, state) => ({
+    fetchData: () => dispatch(fetchData)
+})
+
+export default connect(mapStateToProps,mapDispatchToProps)(WeitaoList)
+
+// export default class WeitaoContain extends Component{
+//     constructor(props) {
+//         super(props)
+//     }
+//     render() {
+//         return (
+//             // <WeitaoList list={this.state.listData} />
+//             <WeitaoContainer />
+//         )
+//     }
+//     componentDidMount() {
+//         this.context.store.dispatch(fetchData)
+//     }
+//     static contextTypes = {
+//         store: PropTypes.object
+//     }
+// }
