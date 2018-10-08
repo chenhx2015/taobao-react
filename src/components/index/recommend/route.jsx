@@ -1,5 +1,5 @@
 import {Switch, Route} from 'react-router-dom'
-import React,{Component} from 'react'
+import React from 'react'
 import List from './list'
 import Detail from './detail'
 import {connect} from 'react-redux'
@@ -14,7 +14,6 @@ const mapDispatchToProps = (dispatch) => ({
 })
 
 const RouteAbleDetail = ({match, list, ...rest}) => {
-    // console.log(rest)
     let id= match.params.id
     let goods = list.find(value => id == value.id )
 
@@ -28,7 +27,6 @@ export default ({location, match}) => {
     return (
         <Switch>
             <Route exact path={match.path + '/'} component={List}/>
-
             <Route path={match.path + '/:id'} component={ DetailContainer}/>
         </Switch>
     )

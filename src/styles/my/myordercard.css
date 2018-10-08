@@ -1,0 +1,55 @@
+.Myordercard .myorder {
+  position: relative;
+  overflow: hidden;
+  width: 88%;
+  margin: 0 auto;
+  background: #fff;
+  font-size: 12px;
+  padding: 3%;
+  border-radius: 10px; }
+  .Myordercard .myorder strong {
+    font-size: 15px; }
+  .Myordercard .myorder .order-title {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.6rem; }
+    .Myordercard .myorder .order-title .more {
+      position: absolute;
+      right: 20px;
+      top: 4px; }
+  .Myordercard .myorder .tab {
+    margin: 0;
+    padding: 1.2rem 1rem 0.6rem;
+    overflow: hidden; }
+    .Myordercard .myorder .tab li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-decoration: none;
+      float: left;
+      width: 20%; }
+      .Myordercard .myorder .tab li a {
+        text-decoration: none; }
+        .Myordercard .myorder .tab li a div {
+          width: 1.8rem;
+          height: 1.8rem;
+          margin-left: 0.4rem;
+          margin-bottom: 0.2rem;
+          background: url(/images/indexTab.png) no-repeat;
+          background-size: cover;
+          border: none; }
+
+.Myordercard .addcard {
+  color: #ff6300; }
+  .Myordercard .addcard .add {
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    box-shadow: 0px 1px 1px #666;
+    margin: 2rem auto 1rem;
+    background: #fff;
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 2.4rem; }
+  .Myordercard .addcard .text {
+    text-align: center;
+    font-size: 0.12rem; }

@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-// import PropTypes from 'prop-types'
-// import axios from 'axios'
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom"
 
 import Index from './route/Index'
@@ -8,8 +6,7 @@ import Weitao from './route/Weitao'
 import ShoppingCart from './route/ShoppingCart'
 import My from './route/My'
 
-// import getListDataAction from './store/action/actions'
-
+// import './service/rem'
 import './styles/index/index.css'
 
 class App extends Component {
@@ -21,7 +18,6 @@ class App extends Component {
       <Router>
       <div className="App">
       <Switch>
-
           <Route path="/weitao" component={Weitao} />
           <Route path="/shoppingCart" component={ShoppingCart} />
           <Route path="/my" component={My} />

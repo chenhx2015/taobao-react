@@ -30,7 +30,6 @@ const Recommendgoodul = ({listdata=[]}) => {
         </div>
     )
 }
-
 export default class RecommendList extends Component {
     constructor(props) {
         super(props)
