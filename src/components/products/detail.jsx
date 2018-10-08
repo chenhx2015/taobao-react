@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 
 import Dchoose from './dchoose'
 
-import '../../../styles/index/goodsdetail.css'
+import '../../styles/index/goodsdetail.css'
 
 export default class Detail extends Component {
     constructor(props) {

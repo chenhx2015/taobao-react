@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../../../styles/index/dchoose.css'
+import '../../styles/index/dchoose.css'
 
 
 export default class Dchoose extends Component {
@@ -66,9 +66,6 @@ export default class Dchoose extends Component {
         })
     }
     addcart(e) {
-        console.log(e)
-        console.log("intro--",this.props.intro)
-        console.log("price--",this.props.price)
         this.props.addcart(this.props.id, this.state.choosenum, this.props.intro, this.props.price, this.props.imgurl)
     }
 

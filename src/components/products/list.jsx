@@ -1,9 +1,8 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
-import '../../styles/index/recommendgood.css'
+import React, { Component } from 'react'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 
 let ListItem = ( {price, num, intro, imgurl,id} ) => (
-    <li className="recommendgoodli">
+    <li className="">
         <Link to={"/products/" + id} >
             <div className="picdiv">
                 <img src={imgurl} alt=""/>
@@ -17,29 +16,32 @@ let ListItem = ( {price, num, intro, imgurl,id} ) => (
     </li>
 )
 
-export default ({list=[]}) => {
+
+const List = ({list=[]}) => {
     return (
         <div>
-            <p >猜你喜欢</p>
-            <ul className="recommendgoodul">
+            <ul className="">
             { list.map((item) =>
                 <ListItem key={item.id} imgurl={item.imgurl} intro={ item.intro} price={item.price} num={item.num} key={item.id} id={item.id}></ListItem>
             )}
             </ul>
+            <span>分页1，2，3</span>
         </div>
     )
 }
 
-// export default class ListClass extends Component {
-//     constructor(props) {
-//         super(props)
-//     }
-//     componentDidMount() {
-//         this.props.fetchList()
-//     }
-//     render() {
-//         return (
-//             <RecommendList {...this.props}/>
-//         )
-//     }
-// }
+
+export default class ListClass extends Component {
+    constructor(props) {
+        super(props)
+    }
+    componentDidMount() {
+        this.props.fetchList()
+    }
+    render() {
+        return (
+            <List {...this.props}/>
+        )
+    }
+}
+ 

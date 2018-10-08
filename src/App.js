@@ -5,6 +5,7 @@ import Index from './route/Index'
 import Weitao from './route/Weitao'
 import ShoppingCart from './route/ShoppingCart'
 import My from './route/My'
+import ProductsRoute from './route/products'
 
 // import './service/rem'
 import './styles/index/index.css'
@@ -21,6 +22,7 @@ class App extends Component {
           <Route path="/weitao" component={Weitao} />
           <Route path="/shoppingCart" component={ShoppingCart} />
           <Route path="/my" component={My} />
+          <Route  path='/products' component={ProductsRoute} />
           {/* 首页 */}
           <Route path="/" component={Index} />
       </Switch>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Indexnav = () => (
+export default () => (
     <ul className="nav-icon-ul">
         <li><a href="/"><div></div>天猫</a></li>
         <li><a href="/"><div></div>聚划算</a></li>
@@ -15,5 +15,3 @@ const Indexnav = () => (
         <li><a to="/"><div></div>分类</a></li>
     </ul>
 )
-
-export default Indexnav
