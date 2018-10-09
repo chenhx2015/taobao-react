@@ -19,7 +19,6 @@ const SectionItem = ( {price, num, intro, imgurl,id} ) => (
 
 export const GoodsSection = (className) => {
     return ({hotlist=[]}) => {
-        console.warn(hotlist)
         return (
         <ul className={className}>
             {

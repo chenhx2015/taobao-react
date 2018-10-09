@@ -23,17 +23,41 @@ const fetchHots = (dispatch, getState) => {
     })
 }
 
+const fetchCheaps = (dispatch, getState) => {
+    // return fetch('./mockData/hots.json',{}).then( res => {
+    //     return res.json()
+    // }).then(res => {
+    //     dispatch(addhots(res))
+    // })
+}
+
+const fetchFashions = (dispatch, getState) => {
+    // return fetch('./mockData/hots.json',{}).then( res => {
+    //     return res.json()
+    // }).then(res => {
+    //     dispatch(addhots(res))
+    // })
+}
+
+const fetchGlobals = (dispatch, getState) => {
+    // return fetch('./mockData/hots.json',{}).then( res => {
+    //     return res.json()
+    // }).then(res => {
+    //     dispatch(addhots(res))
+    // })
+}
+
 const mapStateToProps = (state) => ({
-    recommends: state.goods,
-    hots: state.hots
+    recommends: state.goods.filter(item=>item.tag==='recommend'),
+    hots: state.goods.filter(item=>item.tag==='hot')
 })
 
 const mapDispatchToProps = (dispatch, state) => ({
     fetchRecommends: () => dispatch(fetchRecommends),
     fetchHots: () => dispatch(fetchHots),
-    fetchCheaps: () => dispatch(fetchRecommends),
-    fetchFashions: () => dispatch(fetchRecommends),
-    fetchGlobals: () => dispatch(fetchRecommends),
+    fetchCheaps: () => dispatch(fetchCheaps),
+    fetchFashions: () => dispatch(fetchFashions),
+    fetchGlobals: () => dispatch(fetchGlobals),
 })
 
 const HomeContainer = connect(mapStateToProps, mapDispatchToProps)(Home)

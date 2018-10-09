@@ -19,7 +19,7 @@ const fetchData = (dispatch, getState) => {
 
 const mapStateToProps = (state) => ({
     list: state.goods,
-    hots: state.hots
+ 
 })
 
 const mapDispatchToProps = (dispatch, state) => ({
