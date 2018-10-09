@@ -4,14 +4,14 @@ import Hotgoods from './Hotgoods'
 import Eachmodule from './Eachmodule'
 import RecommendList from './Recommendlist'
 
-const Index = ({recommends, hots, cheaps, fashions, globals, onsales}) => {
+const Index = ({recommends, hots, cheaps, fashions, globals}) => {
     return (
         <div className="indexPage">
             <Indexnav />
             {/* 热门商品 */}
-            <Hotgoods list={hots}/>
+            <Hotgoods hotlist={hots}/>
             {/* 各个大模块 */}
-            <Eachmodule cheaps={cheaps} fashions={fashions} globals={globals} onsales={onsales} />
+            <Eachmodule fashions={fashions} cheaps={cheaps} globals={globals} />
             {/* 猜你喜欢 */}
             <div className="recommendgoods">
                 {/* 推荐产品列表组件 猜你喜欢 */}
@@ -30,7 +30,7 @@ export default class IndexClass extends Component {
         this.props.fetchHots()
         this.props.fetchCheaps()
         this.props.fetchFashions()
-        this.props.fetchOnSales()
+        // this.props.fetchOnSales()
         this.props.fetchGlobals()
     }
     render() {
