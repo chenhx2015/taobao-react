@@ -1,8 +1,12 @@
 export const ADD_GOODS = 'ADD_GOODS'
 export const ADD_HOTS = 'ADD_HOTS'
 export const ADD_CART = 'ADD_CART'
+export const CART_DECREASE = 'CART_DECREASE'
+export const CART_INCREASE = 'CART_INCREASE'
+export const ADD_FASHIONS = 'ADD_FASHIONS'
+export const ADD_CHEAPS = 'ADD_CHEAPS'
+export const ADD_GLOBALS = 'ADD_GLOBALS'
 export const ADD_WEITAO_DATA = 'ADD_WEITAO_DATA'
-
 
 export const addgoods = (data) => {
     return {
@@ -18,12 +22,48 @@ export const addhots = (data) => {
     }
 }
 
+export const addfashions = (data) => {
+    return {
+        type: ADD_FASHIONS,
+        payload: data
+    }
+}
+
+export const addcheaps = (data) => {
+    return {
+        type: ADD_CHEAPS,
+        payload: data
+    }
+}
+
+export const addglobals = (data) => {
+    return {
+        type: ADD_GLOBALS,
+        payload: data
+    }
+}
+
 export const addcart = (goodsinfo) => {
     return {
         type: ADD_CART,
         payload: goodsinfo
     }
 }
+
+// cart 
+export const cartIncrease = (id) => {
+    return {
+        type: CART_INCREASE,
+        payload: id
+    }
+}
+export const cartDecrease = (id) => {
+    return {
+        type: CART_DECREASE,
+        payload: id
+    }
+}
+
 // weitao
 export const addweitaodata = (weitaodata) => {
     return {

@@ -67,6 +67,7 @@ export default class Dchoose extends Component {
     }
     addcart(e) {
         this.props.addcart(this.props.id, this.state.choosenum, this.props.intro, this.props.price, this.props.imgurl)
+        this.props.togglepop()
     }
 
 }

@@ -30,7 +30,6 @@ export default class IndexClass extends Component {
         this.props.fetchHots()
         this.props.fetchCheaps()
         this.props.fetchFashions()
-        // this.props.fetchOnSales()
         this.props.fetchGlobals()
     }
     render() {

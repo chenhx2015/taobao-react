@@ -2,18 +2,12 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom"
 
 const SectionItem = ( {price, num, intro, imgurl,id} ) => (
-    <li className="">
+    <li>
         <Link to={"/products/" + id} >
-            <div className="">
-                <img src={imgurl} alt=""/>
-            </div>
-            <p>{intro}</p>
-            <p>
-                <span className="price">{price}</span>
-                <span>{num}</span>
-            </p>
+            <img src={imgurl} alt=""/>
         </Link>
     </li>
+
 )
 
 const ModuleSection =  (className, tipClass, title) => ({list=[] }) => (
