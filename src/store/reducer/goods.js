@@ -1,13 +1,20 @@
 import {ADD_GOODS, ADD_HOTS} from '../action/actions'
 
+function upinsert(state, data) {
+    let ids = data.map(item=>item.id)
+    state = state.filter(item=> ids.indexOf(item.id) === -1 )
+    return state.concat(data)
+}
+
 export default (state=[], action) => {
+    let data = null
     switch (action.type) {
         case ADD_GOODS: 
-            console.warn('add goods', state.length)
-            return [].concat(...(action.payload.map(item=>({...item, tag:'recommend'}))))
+            data = action.payload.map(item=>({...item, tag:'recommend'}))
+            return upinsert(state, data)
         case ADD_HOTS:
-            console.warn('add hots', state.length)
-            return state.concat(...(action.payload.map(item=>({...item, tag:'hot'}))))
+            data = action.payload.map(item=>({...item, tag:'hot'}))
+            return upinsert(state, data)
         default:
             return state
     }
