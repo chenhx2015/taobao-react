@@ -17,14 +17,14 @@ const SectionItem = ( {price, num, intro, imgurl,id} ) => (
     <li><Link to={"/products/" + id}><img src={imgurl} alt=""/></Link></li>
 )
 
-export const GoodsSection =  (className) => {
+export const GoodsSection = (className) => {
     return ({hotlist=[]}) => {
         console.warn(hotlist)
         return (
         <ul className={className}>
             {
                 hotlist.map( item => (
-                    <SectionItem key={item.id} imgurl={item.imgurl} intro={ item.intro} price={item.price} num={item.num} key={item.id} id={item.id}/>
+                    <SectionItem key={item.id} imgurl={item.imgurl} intro={ item.intro} price={item.price} num={item.num} key={item.id} id={item.id} />
                 ))
             }
             {/* <li><Link to="/"><img src='/images/index/img-hot-1.png' alt=""/></Link></li>

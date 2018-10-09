@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom"
 import '../styles/index/index.css'
 import fetch from 'cross-fetch'
-import { addgoods } from '../store/action/actions'
+import { addgoods, addhots } from '../store/action/actions'
 import {addcart} from '../store/action/actions'
 import { connect } from 'react-redux'
 
@@ -18,7 +18,8 @@ const fetchData = (dispatch, getState) => {
 }
 
 const mapStateToProps = (state) => ({
-    list: state.goods
+    list: state.goods,
+    hots: state.hots
 })
 
 const mapDispatchToProps = (dispatch, state) => ({
