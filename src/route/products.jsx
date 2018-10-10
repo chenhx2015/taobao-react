@@ -19,12 +19,12 @@ const fetchData = (dispatch, getState) => {
 
 const mapStateToProps = (state) => ({
     list: state.goods,
- 
+
 })
 
 const mapDispatchToProps = (dispatch, state) => ({
     fetchList: () => dispatch(fetchData),
-    addcart: (id, qty, intro, price, imgurl) => dispatch(addcart({id, qty, intro, price, imgurl}))
+    addcart: (id, qty, intro, price, imgurl, checkstate) => dispatch(addcart({id, qty, intro, price, imgurl, checkstate}))
 })
 
 const ListContainer = connect(mapStateToProps, mapDispatchToProps)(List)

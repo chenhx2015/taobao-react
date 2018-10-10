@@ -3,6 +3,7 @@ export const ADD_HOTS = 'ADD_HOTS'
 export const ADD_CART = 'ADD_CART'
 export const CART_DECREASE = 'CART_DECREASE'
 export const CART_INCREASE = 'CART_INCREASE'
+export const CART_CHOOSE = 'CART_CHOOSE'
 export const ADD_FASHIONS = 'ADD_FASHIONS'
 export const ADD_CHEAPS = 'ADD_CHEAPS'
 export const ADD_GLOBALS = 'ADD_GLOBALS'
@@ -50,7 +51,7 @@ export const addcart = (goodsinfo) => {
     }
 }
 
-// cart 
+// cart
 export const cartIncrease = (id) => {
     return {
         type: CART_INCREASE,
@@ -61,6 +62,12 @@ export const cartDecrease = (id) => {
     return {
         type: CART_DECREASE,
         payload: id
+    }
+}
+export const cartChoose = (data) => {
+    return {
+        type: CART_CHOOSE,
+        payload: data
     }
 }
 

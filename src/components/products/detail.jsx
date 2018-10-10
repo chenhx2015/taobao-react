@@ -26,7 +26,7 @@ export default class Detail extends Component {
                         <span>{this.props.addr}</span>
                     </div>
                 </div>
-                
+
                 <div className="option">
                     <li className="li-arrow-right">
                         <span>规格</span>
@@ -45,7 +45,7 @@ export default class Detail extends Component {
                 </div>
                 {this.state.showpop ?
                 // {/* 选择弹窗提示 */}
-                <Dchoose addcart={this.props.addcart} id={this.props.id} imgurl={this.props.imgurl} intro={this.props.intro} price={this.props.price} leave={this.props.leave} colors={this.props.colors} sizes={this.props.sizes} togglepop={this.choosepop} /> : null
+                <Dchoose addcart={this.props.addcart} id={this.props.id} imgurl={this.props.imgurl} intro={this.props.intro} price={this.props.price} checkstate={this.props.checkstate} leave={this.props.leave} colors={this.props.colors} sizes={this.props.sizes} togglepop={this.choosepop} /> : null
                 }
             </div>
         )
@@ -55,7 +55,7 @@ export default class Detail extends Component {
             showpop: !this.state.showpop
         })
     }
-    
+
 }
 
 

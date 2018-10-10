@@ -7,7 +7,7 @@ export default class Dchoose extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            choosenum: 1,
+            choosenum: 1
         }
         this.decrease = this.decrease.bind(this)
         this.increase = this.increase.bind(this)
@@ -66,7 +66,7 @@ export default class Dchoose extends Component {
         })
     }
     addcart(e) {
-        this.props.addcart(this.props.id, this.state.choosenum, this.props.intro, this.props.price, this.props.imgurl)
+        this.props.addcart(this.props.id, this.state.choosenum, this.props.intro, this.props.price, this.props.imgurl, this.props.checkstate)
         this.props.togglepop()
     }
 

@@ -28,7 +28,7 @@
             right:2rem;
             bottom:0.4rem;
             color:#888;
-            
+
             .choosenum{
                 span{
                     display: inline-block;
@@ -50,6 +50,38 @@
                     }
                 }
             }
+        }
+    }
+}
+.choosepop{
+    .surebox{
+        background: #fff;
+        width:100%;
+        height: 3.4rem;
+        line-height: 3.4rem;
+        position: fixed;
+        bottom: 3.8rem;
+        div{
+            float: left;
+        }
+        .checkall{
+            margin-left: 1rem;
+        }
+        .total{
+            width:6rem;
+            float: right;
+            text-align: center;
+            span{
+                color:#ff6300;
+            }
+        }
+        .count{
+            float: right;
+            width:7rem;
+            background: #ff6300;
+            color:#fff;
+            text-align: center;
+            font-weight: lighter;
         }
     }
 }
