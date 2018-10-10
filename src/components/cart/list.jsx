@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Item = ({id, imgurl, price, intro, leave, tip, qty, colors=[], sizes=[], increase, decrease, choose, checkstate}) => (
+const Item = ({id, imgurl, price, intro, leave, tip, qty, colors=[], sizes=[], increase, decrease, choose, unchoose, checkstate}) => (
     <div className="shoppingcart">
         {/* 选择小圆圈 */}
         {/* 受控组件 */}
-        <input type="checkbox" checked={checkstate} onChange={() => choose(id, checkstate)}/>
+        <input type="checkbox" checked={checkstate} onChange={() => checkstate ? unchoose(id) : choose({id, qty, price, imgurl})}/>
         <p>{id}</p>
         <div className="intro">
             <div className="imgbox">
@@ -25,24 +25,24 @@ const Item = ({id, imgurl, price, intro, leave, tip, qty, colors=[], sizes=[], i
     </div>
 )
 
-export default  ({cart=[], colors=[], sizes=[], increase, decrease, choose, checkstate, count, total}) => (
+export default  ({cart=[], colors=[], sizes=[], increase, decrease, choose, unchoose, checkstates=[], count, total}) => (
     <div className="chooseshade">
         <div className="choosepop">
             {cart.map(item=>(
-                <Item key={item.id} {...item} colors={colors} sizes={sizes} increase={increase} decrease={decrease} checkstate={checkstate} choose={choose} count={count} total={total} />
+                <Item key={item.id} {...item} colors={colors} sizes={sizes} checkstate={checkstates.indexOf(item.id) === -1 ? false:true} increase={increase} decrease={decrease} choose={choose} unchoose={unchoose}  count={count} total={total} />
             ))}
             {
                 cart.length > 0 ?
                 <div className="surebox">
                     <div className="checkall">
-                        <input type="checkbox" />全选
+                        <input type="checkbox" checked={checkstates.length ===cart.length} onChange={() => { if(checkstates.length ===cart.length) {unchoose(cart.map(item=> item.id)) } else{ choose(cart.map(item=>({id: item.id, qty:item.qty, price:item.price, imgurl:item.imgurl})) )}}}/>全选
                     </div>
                     <div className="count">
                         结算({count})
                     </div>
-                    <div className="total">
+                    <div className="">
                         合计：
-                        <span>￥{total}</span>
+                        <span>￥{total} </span>
                     </div>
                 </div> : null
             }

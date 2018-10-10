@@ -3,7 +3,7 @@
         "id": "20181009001",
         "imgurl": "/images/index/img-hot-1.png",
         "intro": "1热门1",
-        "price": "¥4080",
+        "price": 4080,
         "num": "2人付款",
         "colors":["红色"],
         "sizes": ["均码"]
@@ -12,7 +12,7 @@
         "id": "20181009002",
         "imgurl": "/images/index/img-hot-2.png",
         "intro": "2热门2",
-        "price": "¥4000",
+        "price": 4000,
         "num": "3人付款",
         "colors":["蓝色"],
         "sizes": ["均码"]
@@ -21,7 +21,7 @@
         "id": "20181009003",
         "imgurl": "/images/index/img-hot-3.png",
         "intro": "3热门3",
-        "price": "¥4080",
+        "price": 4080,
         "num": "43人付款",
         "colors":["粉色"],
         "sizes": ["均码"]
@@ -30,7 +30,7 @@
         "id": "20181009004",
         "imgurl": "/images/index/img-hot-4.png",
         "intro": "4热门",
-        "price": "¥3080",
+        "price": 3080,
         "num": "23人付款",
         "colors":["藏蓝色"],
         "sizes": ["均码"]
@@ -39,7 +39,7 @@
         "id": "20181009005",
         "imgurl": "/images/index/img-hot-5.png",
         "intro": "5热门",
-        "price": "¥4080",
+        "price": 4080,
         "num": "73人付款",
         "colors":["藏青色"],
         "sizes": ["均码"]
@@ -48,7 +48,7 @@
         "id": "20181009006",
         "imgurl": "/images/index/img-hot-6.png",
         "intro": "6热门",
-        "price": "¥4080",
+        "price": 4080,
         "num": "73人付款",
         "colors":["藏青色"],
         "sizes": ["均码"]

@@ -3,7 +3,8 @@ export const ADD_HOTS = 'ADD_HOTS'
 export const ADD_CART = 'ADD_CART'
 export const CART_DECREASE = 'CART_DECREASE'
 export const CART_INCREASE = 'CART_INCREASE'
-export const CART_CHOOSE = 'CART_CHOOSE'
+export const ORDER_ADD = 'ORDER_ADD'
+export const ORDER_REMOVE = 'ORDER_REMOVE'
 export const ADD_FASHIONS = 'ADD_FASHIONS'
 export const ADD_CHEAPS = 'ADD_CHEAPS'
 export const ADD_GLOBALS = 'ADD_GLOBALS'
@@ -64,9 +65,15 @@ export const cartDecrease = (id) => {
         payload: id
     }
 }
-export const cartChoose = (data) => {
+export const orderAdd = (data) => {
     return {
-        type: CART_CHOOSE,
+        type: ORDER_ADD,
+        payload: data
+    }
+}
+export const orderRemove = (data) => {
+    return {
+        type: ORDER_REMOVE,
         payload: data
     }
 }

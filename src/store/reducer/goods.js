@@ -10,7 +10,7 @@ export default (state=[], action) => {
     let data = null
     switch (action.type) {
         case ADD_GOODS:
-            data = action.payload.map(item=>({...item, tag:'recommend', checkstate: false, count: 0, total: 0}))
+            data = action.payload.map(item=>({...item, tag:'recommend'}))
             return upinsert(state, data)
         case ADD_HOTS:
             data = action.payload.map(item=>({...item, tag:'hot'}))
