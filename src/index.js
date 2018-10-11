@@ -24,12 +24,6 @@ const persistedReducer = persistReducer(
     taobaoApp
 )
 
-// export default () => {
-//     let store = createStore(persistedReducer, applyMiddleware(logger))
-//     let persistor = persistStore(store)
-//     return { store, persistor }
-// }
-
 let store = createStore(
     persistedReducer,
     applyMiddleware(thunk, logger)

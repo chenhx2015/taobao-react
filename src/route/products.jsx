@@ -19,18 +19,17 @@ const fetchData = (dispatch, getState) => {
 
 const mapStateToProps = (state) => ({
     list: state.goods,
-
 })
 
 const mapDispatchToProps = (dispatch, state) => ({
     fetchList: () => dispatch(fetchData),
-    addcart: (id, qty, intro, price, imgurl, checkstate) => dispatch(addcart({id, qty, intro, price, imgurl, checkstate}))
+    addcart: (id, qty, intro, price, imgurl) => { dispatch(addcart({id, qty, intro, price, imgurl})) }
 })
 
 const ListContainer = connect(mapStateToProps, mapDispatchToProps)(List)
 
 const RouteAbleDetail = ({match, list, ...rest}) => {
-    let id= match.params.id
+    let id = match.params.id
     let goods = list.find(value => id == value.id )
         return (
             <Detail id={id} {...rest} {...goods} />
