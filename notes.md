@@ -107,8 +107,10 @@
      * redux-pack 中间件 dispatch 基于 Promise 的异步 Action
 二: middleware
   1. 可以使用redux middleware 来进行日志记录，创建崩溃报告，调用异步接口或者路由等等
-
-
+  2. redux-logger
+  3. redux-persist
+  4. redux-thunk
+  5. reselect --待学习（属于性能优化部分）
 
 2018.9.25
 高级部分:
@@ -245,6 +247,8 @@
          * 有关旧式字符串ref用法的警告 （建议改用回调）
          * 检测意外的副作用
  19. 与第三方库协同 ------了解一下就可以了
+
+
 
 
 
