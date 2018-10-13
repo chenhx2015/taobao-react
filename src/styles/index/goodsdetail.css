@@ -17,7 +17,8 @@
       margin: 1rem auto; }
     .goodsDetailPage .detail-intro .intro {
       width: 90%;
-      margin: 0 auto; }
+      margin: 0 auto;
+      position: relative; }
     .goodsDetailPage .detail-intro .tip {
       width: 90%;
       overflow: hidden;

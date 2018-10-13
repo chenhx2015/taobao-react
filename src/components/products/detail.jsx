@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { Redirect } from "react-router-dom"
 
 import Dchoose from './dchoose'
 
@@ -12,6 +12,7 @@ export default class Detail extends Component {
             showpop: false
         }
         this.choosepop = this.choosepop.bind(this)
+        this.choosepop2 = this.choosepop2.bind(this)
     }
     render() {
         return (
@@ -40,7 +41,7 @@ export default class Detail extends Component {
                 <div className="btn-contain">
                     <div className="buybtn">
                         <span onClick={this.choosepop}>加入购物车</span>
-                        <span>立即购买</span>
+                        <span onClick={this.choosepop2}>立即购买</span>
                     </div>
                 </div>
                 {this.state.showpop ?
@@ -54,6 +55,12 @@ export default class Detail extends Component {
         this.setState({
             showpop: !this.state.showpop
         })
+    }
+    choosepop2() {
+        this.setState({
+            showpop: !this.state.showpop
+        })
+        this.props.history.push('/my/makeOrder')
     }
 
 }

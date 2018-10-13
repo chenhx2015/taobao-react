@@ -1,0 +1,61 @@
+.makeorder-page .primary-color {
+  color: #ff6300; }
+
+.makeorder-page .right-arrow {
+  position: relative; }
+  .makeorder-page .right-arrow:after {
+    content: '';
+    width: 0.5rem;
+    height: 0.5rem;
+    border-top: 1px solid #888;
+    border-right: 1px solid #888;
+    position: absolute;
+    right: 0.2rem;
+    top: 1.4rem;
+    transform: rotate(45deg); }
+
+.makeorder-page .buyer-info {
+  width: 94%;
+  margin: 0 auto; }
+  .makeorder-page .buyer-info p:nth-of-type(1) {
+    font-size: 1.1rem; }
+    .makeorder-page .buyer-info p:nth-of-type(1) .number {
+      float: right; }
+  .makeorder-page .buyer-info .tip {
+    color: #ff6300; }
+
+.makeorder-page .makesure-info div {
+  width: 94%;
+  margin: 0 auto;
+  padding: 0rem 0;
+  overflow: hidden; }
+  .makeorder-page .makesure-info div p:nth-of-type(1) {
+    float: left; }
+  .makeorder-page .makesure-info div p:nth-of-type(2) {
+    float: right;
+    margin-right: 1.4rem; }
+
+.makeorder-page .intro {
+  position: relative;
+  width: 98%;
+  margin: 0 auto; }
+
+.makeorder-page .makesure-footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0; }
+  .makeorder-page .makesure-footer div:nth-of-type(1) {
+    float: left;
+    width: 65%;
+    background: #eee;
+    padding: 1rem 0;
+    padding-right: 5%;
+    text-align: right; }
+  .makeorder-page .makesure-footer div:nth-of-type(2) {
+    float: right;
+    width: 30%;
+    background: #ff6300;
+    padding: 1rem 0;
+    text-align: center;
+    color: #fff;
+    font-size: 1.1rem; }
