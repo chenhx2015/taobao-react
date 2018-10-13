@@ -9,6 +9,7 @@ export const ADD_FASHIONS = 'ADD_FASHIONS'
 export const ADD_CHEAPS = 'ADD_CHEAPS'
 export const ADD_GLOBALS = 'ADD_GLOBALS'
 export const ADD_WEITAO_DATA = 'ADD_WEITAO_DATA'
+export const SHOW_LOADING = 'SHOW_LOADING'
 
 export const addgoods = (data) => {
     return {
@@ -83,6 +84,14 @@ export const addweitaodata = (weitaodata) => {
     return {
         type: ADD_WEITAO_DATA,
         payload: weitaodata
+    }
+}
+
+// loading in every module
+export const showLoading = (data) => {
+    return {
+        type: SHOW_LOADING,
+        payload: data
     }
 }
 

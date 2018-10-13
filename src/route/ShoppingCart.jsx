@@ -9,8 +9,7 @@ const mapStateToProps = (state) =>{
     return ({
         cart: state.cart,
         checkstates: state.order.map(item=>item.id),
-        count: state.order.length,
-        total: state.order.reduce((sum, item)=> sum + parseInt(item.qty) * parseInt(item.price), 0)
+        order: state.order
     })
 }
 
