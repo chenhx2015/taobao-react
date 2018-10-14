@@ -1,0 +1,34 @@
+.allorder {
+    position: relative;
+    width:100%;
+    margin:0 auto;
+    background: #ffff;
+    padding:0.3rem 0;
+    .intro{
+        position: relative;
+        width:100%;
+        .imgbox{
+            position: absolute;
+            width:6rem;
+            height:6rem;
+            left:0.4rem;
+            img{
+                width:100%;
+                height:100%;
+            }
+        }
+        .introtext{
+            margin-left:30%;
+            height: 6rem;
+            .price{
+                color:#ff6300;
+            }
+        }
+        .num{
+            position: absolute;
+            right:2rem;
+            bottom:0.4rem;
+            color:#888;
+        }
+    }
+}

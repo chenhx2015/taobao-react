@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import { Redirect } from "react-router-dom"
-
 import Dchoose from './dchoose'
 
 import '../../styles/index/goodsdetail.css'
@@ -9,7 +7,8 @@ export default class Detail extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            showpop: false
+            showpop: false,
+            btnType: 'buynow'
         }
         this.choosepop = this.choosepop.bind(this)
         this.choosepop2 = this.choosepop2.bind(this)
@@ -46,21 +45,22 @@ export default class Detail extends Component {
                 </div>
                 {this.state.showpop ?
                 // {/* 选择弹窗提示 */}
-                <Dchoose addcart={this.props.addcart} id={this.props.id} imgurl={this.props.imgurl} intro={this.props.intro} price={this.props.price} checkstate={this.props.checkstate} leave={this.props.leave} colors={this.props.colors} sizes={this.props.sizes} togglepop={this.choosepop} /> : null
+                <Dchoose addcart={this.props.addcart} makeorder={this.props.makeorder} btntype={this.state.btnType} history={this.props.history} id={this.props.id} imgurl={this.props.imgurl} intro={this.props.intro} price={this.props.price} checkstate={this.props.checkstate} leave={this.props.leave} colors={this.props.colors} sizes={this.props.sizes} togglepop={this.choosepop} /> : null
                 }
             </div>
         )
     }
     choosepop() {
         this.setState({
-            showpop: !this.state.showpop
+            showpop: !this.state.showpop,
+            btnType: 'addcart'
         })
     }
     choosepop2() {
         this.setState({
-            showpop: !this.state.showpop
+            showpop: !this.state.showpop,
+            btnType: 'buynow'
         })
-        this.props.history.push('/my/makeOrder')
     }
 
 }

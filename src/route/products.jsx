@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom"
 import '../styles/index/index.css'
 import fetch from 'cross-fetch'
-import { addgoods, addhots } from '../store/action/actions'
-import {addcart} from '../store/action/actions'
+import { addgoods, addcart } from '../store/action/actions'
 import { connect } from 'react-redux'
 
 import List from '../components/products/list'

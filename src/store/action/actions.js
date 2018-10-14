@@ -10,6 +10,7 @@ export const ADD_CHEAPS = 'ADD_CHEAPS'
 export const ADD_GLOBALS = 'ADD_GLOBALS'
 export const ADD_WEITAO_DATA = 'ADD_WEITAO_DATA'
 export const SHOW_LOADING = 'SHOW_LOADING'
+export const MAKE_ALL_ORDER = 'MAKE_ALL_ORDER'
 
 export const addgoods = (data) => {
     return {
@@ -91,6 +92,16 @@ export const addweitaodata = (weitaodata) => {
 export const showLoading = (data) => {
     return {
         type: SHOW_LOADING,
+        payload: data
+    }
+}
+
+
+
+// 生成总的订单列表
+export const makeallorder = (data) => {
+    return {
+        type: MAKE_ALL_ORDER,
         payload: data
     }
 }

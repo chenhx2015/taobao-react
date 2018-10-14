@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom"
 import '../../styles/index/dchoose.css'
-
 
 export default class Dchoose extends Component {
     // 添加一个类构造函数来初始化状态 this.state
@@ -66,8 +66,23 @@ export default class Dchoose extends Component {
         })
     }
     addcart(e) {
-        this.props.addcart(this.props.id, this.state.choosenum, this.props.intro, this.props.price, this.props.imgurl, this.props.checkstate)
-        this.props.togglepop()
+        // 加入购物车
+        if (this.props.btntype === 'addcart') {
+            this.props.addcart(this.props.id, this.state.choosenum, this.props.intro, this.props.price, this.props.imgurl)
+            this.props.togglepop()
+        }else{
+        // 直接去下单
+            // this.props.makeorder(this.props.id, this.state.choosenum, this.props.intro, this.props.price, this.props.imgurl)
+            this.props.togglepop()
+            this.props.history.push('/my/makeOrder', {
+                id: this.props.id, 
+                qty: this.state.choosenum, 
+                intro: this.props.intro, 
+                price: this.props.price, 
+                imgurl: this.props.imgurl
+            })
+        }
+        
     }
 
 }
