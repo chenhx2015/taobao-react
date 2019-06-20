@@ -1,0 +1,32 @@
+{
+    "listData":[
+        {
+            "id": "20180920001",
+            "imgurl": "/images/index/pic-recommend-1.png",
+            "intro": "1MK女包蜜蜂单肩",
+            "price": 4080,
+            "num": "2人付款",
+            "colors":["红色"],
+            "sizes": ["均码"]
+        },
+        {
+            "id": "20180920002",
+            "imgurl": "/images/index/pic-recommend-1.png",
+            "intro": "1MK女包蜜蜂单肩",
+            "price": 4080,
+            "num": "2人付款",
+            "colors":["红色"],
+            "sizes": ["均码"]
+        },
+        {
+            "id": "20180920003",
+            "imgurl": "/images/index/pic-recommend-1.png",
+            "intro": "1MK女包蜜蜂单肩",
+            "price": 4080,
+            "num": "2人付款",
+            "colors":["红色"],
+            "sizes": ["均码"]
+        }
+    ]
+    
+}

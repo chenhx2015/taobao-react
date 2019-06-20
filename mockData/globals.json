@@ -1,0 +1,38 @@
+[
+    {
+        "id": "20181009211",
+        "imgurl": "/images/index/icon-module-1.png",
+        "intro": "1热门1",
+        "price": 4080,
+        "num": "2人付款",
+        "colors":["红色"],
+        "sizes": ["均码"]
+    },
+    {
+        "id": "20181009212",
+        "imgurl": "/images/index/icon-module-0.png",
+        "intro": "2热门2",
+        "price": 4000,
+        "num": "3人付款",
+        "colors":["蓝色"],
+        "sizes": ["均码"]
+    },
+    {
+        "id": "20181009213",
+        "imgurl": "/images/index/icon-module-2.png",
+        "intro": "3热门3",
+        "price": 4080,
+        "num": "43人付款",
+        "colors":["粉色"],
+        "sizes": ["均码"]
+    },
+    {
+        "id": "20181009214",
+        "imgurl": "/images/index/icon-module-3.png",
+        "intro": "4热门",
+        "price": 3080,
+        "num": "23人付款",
+        "colors":["藏蓝色"],
+        "sizes": ["均码"]
+    }
+]
