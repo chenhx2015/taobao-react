@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import WeitaoList from "./WeitaoList";
 import fetch from "cross-fetch";
 import { addweitaodata } from "../../store/action/actions";
-import { basic_url } from "./env";
+import { basic_url } from "../../env";
 
 const fetchData = (dispatch, getState) => {
   return fetch(basic_url + "/mockData/weitao.json", {})

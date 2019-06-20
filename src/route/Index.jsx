@@ -12,7 +12,7 @@ import {
 } from "../store/action/actions";
 import { connect } from "react-redux";
 import Home from "../components/index";
-import { basic_url } from "./env";
+import { basic_url } from "../env";
 
 // 推荐列表
 const fetchRecommends = (dispatch, getState) => {

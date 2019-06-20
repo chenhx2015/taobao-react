@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 
 import List from "../components/products/list";
 import Detail from "../components/products/detail";
-import { basic_url } from "./env";
+import { basic_url } from "../env";
 
 const fetchData = (dispatch, getState) => {
   return fetch(basic_url + "/mockData/goods.json", {})

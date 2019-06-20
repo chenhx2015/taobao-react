@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-
+import { basic_url } from "../../env";
 // 顶部信息
 const InfoCard = () => (
   <div className="infocard">
     <div className="infocardbox">
       <div className="img">
-        <img src="%PUBLIC_URL%/images/index/icon-delifood-1.png" alt="" />
+        <img src={basic_url + "/images/index/icon-delifood-1.png"} alt="" />
       </div>
       <div className="info">
         <p className="num">tb376078529</p>
