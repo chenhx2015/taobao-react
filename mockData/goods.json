@@ -1,7 +1,7 @@
 [
   {
     "id": "20180912001",
-    "imgurl": "./images/index/pic-recommend-1.png",
+    "imgurl": "/images/index/pic-recommend-1.png",
     "intro": "1意大利代购Gucci/古奇女包蜜蜂单肩",
     "price": 4080,
     "num": "2人付款",
@@ -10,7 +10,7 @@
   },
   {
     "id": "20180912002",
-    "imgurl": "./images/index/pic-recommend-2.png",
+    "imgurl": "/images/index/pic-recommend-2.png",
     "intro": "2意大利代购Gucci/古奇女包蜜蜂单肩",
     "price": 4000,
     "num": "3人付款",
@@ -19,7 +19,7 @@
   },
   {
     "id": "20180912003",
-    "imgurl": "./images/index/pic-recommend-3.png",
+    "imgurl": "/images/index/pic-recommend-3.png",
     "intro": "3意大利代购Gucci/古奇女包蜜蜂单肩",
     "price": 4080,
     "num": "43人付款",
@@ -28,7 +28,7 @@
   },
   {
     "id": "20180912004",
-    "imgurl": "./images/index/pic-recommend-4.png",
+    "imgurl": "/images/index/pic-recommend-4.png",
     "intro": "4意大利代购Gucci/古奇女包蜜蜂单肩",
     "price": 3080,
     "num": "23人付款",
@@ -37,7 +37,7 @@
   },
   {
     "id": "20180912005",
-    "imgurl": "./images/index/pic-recommend-5.png",
+    "imgurl": "/images/index/pic-recommend-5.png",
     "intro": "5意大利代购Gucci/古奇女包蜜蜂单肩",
     "price": 4080,
     "num": "73人付款",
