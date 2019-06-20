@@ -17,17 +17,17 @@
         height: 1.8rem;
         margin-left: 2rem;
         margin-bottom: 0.2rem;
-        background: url("/images/indexTab.png") no-repeat;
+        background: url("../../images/indexTab.png") no-repeat;
         background-size: cover;
         border: none; }
       .App .navTab li:nth-of-type(2) div {
-        background: url("/images/discountTab.png") no-repeat;
+        background: url("../../images/discountTab.png") no-repeat;
         background-size: cover; }
       .App .navTab li:nth-of-type(3) div {
-        background: url("/images/hikingTab.png") no-repeat;
+        background: url("../../images/hikingTab.png") no-repeat;
         background-size: cover; }
       .App .navTab li:nth-of-type(4) div {
-        background: url("/images/myTab.png") no-repeat;
+        background: url("../../images/myTab.png") no-repeat;
         background-size: cover; }
       .App .navTab li a {
         color: #666;
@@ -49,35 +49,35 @@
         height: 1.8rem;
         margin-left: 1.5rem;
         margin-bottom: 0.2rem;
-        background: url("/images/nav1.png") no-repeat;
+        background: url("../../images/nav1.png") no-repeat;
         background-size: cover;
         border: none; }
       .App .indexPage .nav-icon-ul li:nth-of-type(2) div {
-        background: url("/images/nav2.png") no-repeat;
+        background: url("../../images/nav2.png") no-repeat;
         background-size: cover; }
       .App .indexPage .nav-icon-ul li:nth-of-type(3) div {
-        background: url("/images/nav3.png") no-repeat;
+        background: url("../../images/nav3.png") no-repeat;
         background-size: cover; }
       .App .indexPage .nav-icon-ul li:nth-of-type(4) div {
-        background: url("/images/nav4.png") no-repeat;
+        background: url("../../images/nav4.png") no-repeat;
         background-size: cover; }
       .App .indexPage .nav-icon-ul li:nth-of-type(5) div {
-        background: url("/images/nav5.png") no-repeat;
+        background: url("../../images/nav5.png") no-repeat;
         background-size: cover; }
       .App .indexPage .nav-icon-ul li:nth-of-type(6) div {
-        background: url("/images/nav6.png") no-repeat;
+        background: url("../../images/nav6.png") no-repeat;
         background-size: cover; }
       .App .indexPage .nav-icon-ul li:nth-of-type(7) div {
-        background: url("/images/nav7.png") no-repeat;
+        background: url("../../images/nav7.png") no-repeat;
         background-size: cover; }
       .App .indexPage .nav-icon-ul li:nth-of-type(8) div {
-        background: url("/images/nav8.png") no-repeat;
+        background: url("../../images/nav8.png") no-repeat;
         background-size: cover; }
       .App .indexPage .nav-icon-ul li:nth-of-type(9) div {
-        background: url("/images/nav3.png") no-repeat;
+        background: url("../../images/nav3.png") no-repeat;
         background-size: cover; }
       .App .indexPage .nav-icon-ul li:nth-of-type(10) div {
-        background: url("/images/nav7.png") no-repeat;
+        background: url("../../images/nav7.png") no-repeat;
         background-size: cover; }
       .App .indexPage .nav-icon-ul li a {
         color: #666;
@@ -96,7 +96,7 @@
       .App .indexPage .topGoodsList li img {
         width: 100%;
         height: 100%; }
-      .App .indexPage .topGoodsList li:nth-of-type(2n+1) {
+      .App .indexPage .topGoodsList li:nth-of-type(2n + 1) {
         border-bottom: 0.1rem solid #eee;
         border-right: 0.1rem solid #eee; }
       .App .indexPage .topGoodsList li:nth-of-type(2n) {
