@@ -9,6 +9,7 @@ import ProductsRoute from "./route/products";
 
 // import './service/rem'
 import "./styles/index/index.css";
+import { basic_url } from "./env";
 
 class App extends Component {
   constructor(props) {
@@ -16,7 +17,7 @@ class App extends Component {
   }
   render() {
     return (
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router basename={basic_url}>
         <div className="App">
           <Switch>
             <Route path="/weitao" component={Weitao} />

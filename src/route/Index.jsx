@@ -12,11 +12,12 @@ import {
 } from "../store/action/actions";
 import { connect } from "react-redux";
 import Home from "../components/index";
+import { basic_url } from "./env";
 
 // 推荐列表
 const fetchRecommends = (dispatch, getState) => {
   dispatch(showLoading(true));
-  return fetch("./mockData/goods.json", {})
+  return fetch(basic_url + "/mockData/goods.json", {})
     .then(res => {
       return res.json();
     })
@@ -29,7 +30,7 @@ const fetchRecommends = (dispatch, getState) => {
 // 热门商品
 const fetchHots = (dispatch, getState) => {
   dispatch(showLoading(true));
-  return fetch("./mockData/hots.json", {})
+  return fetch(basic_url + "/mockData/hots.json", {})
     .then(res => {
       return res.json();
     })
@@ -42,7 +43,7 @@ const fetchHots = (dispatch, getState) => {
 // 时尚大咖
 const fetchFashions = (dispatch, getState) => {
   dispatch(showLoading(true));
-  return fetch("./mockData/fashions.json", {})
+  return fetch(basic_url + "/mockData/fashions.json", {})
     .then(res => {
       return res.json();
     })
@@ -55,7 +56,7 @@ const fetchFashions = (dispatch, getState) => {
 // 实惠好货
 const fetchCheaps = (dispatch, getState) => {
   dispatch(showLoading(true));
-  return fetch("./mockData/cheaps.json", {})
+  return fetch(basic_url + "/mockData/cheaps.json", {})
     .then(res => {
       return res.json();
     })
@@ -68,7 +69,7 @@ const fetchCheaps = (dispatch, getState) => {
 // 买遍全球
 const fetchGlobals = (dispatch, getState) => {
   dispatch(showLoading(true));
-  return fetch("./mockData/globals.json", {})
+  return fetch(basic_url + "/mockData/globals.json", {})
     .then(res => {
       return res.json();
     })
