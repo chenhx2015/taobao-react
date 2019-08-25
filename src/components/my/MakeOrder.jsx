@@ -81,13 +81,13 @@ export default class MakeOrder extends Component {
   }
   submit() {
     let info = this.props.location.state;
-    this.props.submit(
-      info.id,
-      info.imgurl,
-      info.price,
-      info.intro,
-      this.state.qty
-    );
+    this.props.makeallorder({
+      id: info.id,
+      imgurl: info.imgurl,
+      price: info.price,
+      intro: info.intro,
+      qty: this.state.qty
+    });
     this.props.history.push("/my/allorder");
   }
   decrease() {

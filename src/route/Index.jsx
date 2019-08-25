@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { Route } from "react-router-dom";
 import "../styles/index/index.css";
 import fetch from "cross-fetch";
 import {

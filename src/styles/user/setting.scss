@@ -1,0 +1,52 @@
+.my-setting {
+  margin-top: 0;
+  ul {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 12px;
+    width: 100%;
+    overflow: hidden;
+    li {
+      width: 50%;
+      float: left;
+      height: 45px;
+      color: #ff6300;
+      background: #eee;
+      line-height: 45px;
+      text-align: center;
+      text-decoration: none;
+      list-style: none;
+    }
+  }
+  .info {
+    padding: 10px 5%;
+  }
+  .mb10 {
+    margin-bottom: 10px;
+  }
+  button {
+    display: block;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background: #ff6300;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+  }
+  .sign-out {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 100px;
+    color: #fff;
+    font-size: 24px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 50%;
+    background: #ff6300;
+    box-shadow: 1px 1px 12px 3px rgb(247, 96, 2);
+  }
+}

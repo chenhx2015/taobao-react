@@ -1,87 +1,91 @@
-.shoppingcart, .makeorder-page{
-    position: relative;
-    width:100%;
-    margin:0 auto;
-    background: #ffff;
-    padding:0.3rem 0;
-    .intro{
-        width:100%;
-        .imgbox{
-            position: absolute;
-            width:6rem;
-            height:6rem;
-            left:0.4rem;
-            img{
-                width:100%;
-                height:100%;
-            }
-        }
-        .introtext{
-            margin-left:30%;
-            height: 6rem;
-            .price{
-                color:#ff6300;
-            }
-        }
-        .num{
-            position: absolute;
-            right:2rem;
-            bottom:0.4rem;
-            color:#888;
+.shoppingcart,
+.makeorder-page {
+  position: relative;
+  margin: 0 auto;
+  background: #ffff;
+  padding: 10px 5%;
+  .intro {
+    width: 100%;
+    .imgbox {
+      position: absolute;
+      width: 6rem;
+      height: 6rem;
+      left: 0.4rem;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .introtext {
+      margin-left: 30%;
+      height: 6rem;
+      .price {
+        color: #ff6300;
+      }
+    }
+    .num {
+      position: absolute;
+      right: 2rem;
+      bottom: 0.4rem;
+      color: #888;
 
-            .choosenum{
-                span{
-                    display: inline-block;
-                    width:1.2rem;
-                    height: 1.2rem;
-                    border:1px solid #eee;
-                    text-align: center;
-                    line-height: 1.2rem;
-                    &:nth-of-type(1) {
-                        border-radius: 6px 0 0 6px;
-                    }
-                    &:nth-of-type(2){
-                        border-left:none;
-                        border-right:none;
-                        width:2rem;
-                    }
-                    &:nth-of-type(3) {
-                        border-radius: 0 6px 6px 0;
-                    }
-                }
-            }
+      .choosenum {
+        span {
+          display: inline-block;
+          width: 1.2rem;
+          height: 1.2rem;
+          border: 1px solid #eee;
+          text-align: center;
+          line-height: 1.2rem;
+          &:nth-of-type(1) {
+            border-radius: 6px 0 0 6px;
+          }
+          &:nth-of-type(2) {
+            border-left: none;
+            border-right: none;
+            width: 2rem;
+          }
+          &:nth-of-type(3) {
+            border-radius: 0 6px 6px 0;
+          }
         }
+      }
     }
+  }
 }
-.choosepop{
-    .surebox{
-        background: #fff;
-        width:100%;
-        height: 3.4rem;
-        line-height: 3.4rem;
-        position: fixed;
-        bottom: 3.8rem;
-        div{
-            float: left;
-        }
-        .checkall{
-            margin-left: 1rem;
-        }
-        .total{
-            width:6rem;
-            float: right;
-            text-align: center;
-            span{
-                color:#ff6300;
-            }
-        }
-        .count{
-            float: right;
-            width:7rem;
-            background: #ff6300;
-            color:#fff;
-            text-align: center;
-            font-weight: lighter;
-        }
+.choosepop {
+  .surebox {
+    background: #fff;
+    width: 100%;
+    height: 3.4rem;
+    line-height: 3.4rem;
+    position: fixed;
+    bottom: 3.8rem;
+    div {
+      float: left;
     }
+    .checkall {
+      margin-left: 1rem;
+    }
+    .total {
+      width: 6rem;
+      float: right;
+      text-align: center;
+      span {
+        color: #ff6300;
+      }
+    }
+    .count {
+      float: right;
+      width: 7rem;
+      background: #ff6300;
+      color: #fff;
+      text-align: center;
+      font-weight: lighter;
+    }
+  }
+}
+.makeorder-page {
+  width: 100%;
+  padding: 0.3rem 0;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { basic_url } from "../../env";
 const SectionItem = ({ price, num, intro, imgurl, id }) => (
   <li>

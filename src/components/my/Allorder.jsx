@@ -3,10 +3,11 @@ import "../../styles/my/allorder.css";
 import { basic_url } from "../../env";
 
 const Item = ({ imgurl, intro, price, qty }) => {
+  console.log(imgurl);
   return (
     <div className="intro">
       <div className="imgbox">
-        <img src={basic_url + imgurl} alt="" />
+        <img src={`${basic_url}${imgurl}`} alt="" />
       </div>
       <div className="introtext">
         <p className="intro">{intro}</p>

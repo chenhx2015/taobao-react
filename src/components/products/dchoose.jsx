@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import "../../styles/index/dchoose.css";
 import { basic_url } from "../../env";
 export default class Dchoose extends Component {

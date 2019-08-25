@@ -1,43 +1,53 @@
-.shoppingcart, .makeorder-page {
+.shoppingcart,
+.makeorder-page {
   position: relative;
-  width: 100%;
   margin: 0 auto;
   background: #ffff;
-  padding: 0.3rem 0; }
-  .shoppingcart .intro, .makeorder-page .intro {
+  padding: 10px 5%; }
+  .shoppingcart .intro,
+  .makeorder-page .intro {
     width: 100%; }
-    .shoppingcart .intro .imgbox, .makeorder-page .intro .imgbox {
+    .shoppingcart .intro .imgbox,
+    .makeorder-page .intro .imgbox {
       position: absolute;
       width: 6rem;
       height: 6rem;
       left: 0.4rem; }
-      .shoppingcart .intro .imgbox img, .makeorder-page .intro .imgbox img {
+      .shoppingcart .intro .imgbox img,
+      .makeorder-page .intro .imgbox img {
         width: 100%;
         height: 100%; }
-    .shoppingcart .intro .introtext, .makeorder-page .intro .introtext {
+    .shoppingcart .intro .introtext,
+    .makeorder-page .intro .introtext {
       margin-left: 30%;
       height: 6rem; }
-      .shoppingcart .intro .introtext .price, .makeorder-page .intro .introtext .price {
+      .shoppingcart .intro .introtext .price,
+      .makeorder-page .intro .introtext .price {
         color: #ff6300; }
-    .shoppingcart .intro .num, .makeorder-page .intro .num {
+    .shoppingcart .intro .num,
+    .makeorder-page .intro .num {
       position: absolute;
       right: 2rem;
       bottom: 0.4rem;
       color: #888; }
-      .shoppingcart .intro .num .choosenum span, .makeorder-page .intro .num .choosenum span {
+      .shoppingcart .intro .num .choosenum span,
+      .makeorder-page .intro .num .choosenum span {
         display: inline-block;
         width: 1.2rem;
         height: 1.2rem;
         border: 1px solid #eee;
         text-align: center;
         line-height: 1.2rem; }
-        .shoppingcart .intro .num .choosenum span:nth-of-type(1), .makeorder-page .intro .num .choosenum span:nth-of-type(1) {
+        .shoppingcart .intro .num .choosenum span:nth-of-type(1),
+        .makeorder-page .intro .num .choosenum span:nth-of-type(1) {
           border-radius: 6px 0 0 6px; }
-        .shoppingcart .intro .num .choosenum span:nth-of-type(2), .makeorder-page .intro .num .choosenum span:nth-of-type(2) {
+        .shoppingcart .intro .num .choosenum span:nth-of-type(2),
+        .makeorder-page .intro .num .choosenum span:nth-of-type(2) {
           border-left: none;
           border-right: none;
           width: 2rem; }
-        .shoppingcart .intro .num .choosenum span:nth-of-type(3), .makeorder-page .intro .num .choosenum span:nth-of-type(3) {
+        .shoppingcart .intro .num .choosenum span:nth-of-type(3),
+        .makeorder-page .intro .num .choosenum span:nth-of-type(3) {
           border-radius: 0 6px 6px 0; }
 
 .choosepop .surebox {
@@ -64,3 +74,7 @@
     color: #fff;
     text-align: center;
     font-weight: lighter; }
+
+.makeorder-page {
+  width: 100%;
+  padding: 0.3rem 0; }
