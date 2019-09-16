@@ -14,4 +14,10 @@ steps:
   - name: build-image
     image: "node:latest"
     commands:
-      - npm run build
+      - npm build
+
+trigger:
+  branch:
+    - master
+  event:
+    - push
