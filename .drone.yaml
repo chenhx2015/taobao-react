@@ -1,0 +1,17 @@
+kind: pipeline
+type: docker
+name: deploy
+
+steps:
+  # - name: unit-test
+  #   image: node:10
+  #   commands:
+  #     - node test/index.js
+  #   when:
+  #     branch: master
+  #     event: push
+
+  - name: build-image
+    image: "node:latest"
+    commands:
+      - npm run build
