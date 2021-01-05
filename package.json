@@ -4,7 +4,7 @@
   "private": false,
   "homepage": "https://github.com/chenhx2015/taobao-react",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "connected-react-router": "^6.5.2",
     "cross-fetch": "^2.2.2",
     "css-loader": "^1.0.0",
